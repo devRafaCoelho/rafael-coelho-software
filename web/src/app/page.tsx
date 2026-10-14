@@ -7,7 +7,7 @@ import { Reveal } from "@/components/landing/reveal";
 
 export default function Home() {
   return (
-    <main className="pt-24">
+    <main className="pt-20">
       <Header />
       <Hero />
       <Reveal>
