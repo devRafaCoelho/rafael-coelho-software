@@ -34,7 +34,7 @@
   - **Resultado:** pass. `node --test docs/s2/copy.test.mjs` — 4 testes, 4 pass. A headline e os status de Pet Sampas e Estoque Inteligente foram verificados. Nenhuma ocorrência de fornecedor de modelo.
   - **Achados:** —
 
-- [ ] **2. Wireframe do funil**
+- [x] **2. Wireframe do funil**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** a ordem das seções só existe no documento de produto. Falta uma página baixa fidelidade para ver o funil em 375px antes de construir a landing.
@@ -49,9 +49,9 @@
     1. Subir o dev server em `web/` e abrir `http://localhost:3000/wireframe`.
     2. No desktop, conferir a headline, a ordem das seções e o botão CTA.
     3. Repetir a leitura em 375px.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Rota `/wireframe` lê `docs/s2/copy.md` e empilha as 12 seções. Botões de ação, retângulos dos clientes e campos do formulário sem envio.
+  - **Resultado:** pass. No desktop (1347px) e em 375px há 12 seções na ordem da copy, a headline provisória e o botão "Falar no WhatsApp" em `rgb(227, 93, 47)`.
+  - **Achados:** a copy gravada com CRLF não separava os blocos; o wireframe passou a aceitar as duas quebras de linha.
 
 - [ ] **3. Foto, logo e favicon no wireframe**
   - **Jira:** n/a
