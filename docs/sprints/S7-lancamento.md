@@ -3,7 +3,7 @@
 **Projeto:** LP Rafael Coelho — Arquitetura de Software  
 **Fonte:** `docs/LP_SoftwareHouse_Documentacao.md` (Sprint 7)  
 **Ambiente de teste:** `http://localhost:3000` para as tasks 1 a 3. A task 4 usa a URL de produção da Vercel do projeto `rafael-coelho-software`.  
-**Status geral:** em execução
+**Status geral:** concluído
 
 ## Índice
 
@@ -72,7 +72,7 @@
   - **Resultado:** pass browser — nos dois viewports `scrollWidth` igual a `clientWidth` (1332 e 375), o WhatsApp do header visível (no celular a borda direita fica em 359), Preço abre "Não há tabela pública." e Enviar começa desabilitado
   - **Achados:** iPhone e Android físicos não foram testados
 
-- [ ] **4. Produção na URL da Vercel**
+- [x] **4. Produção na URL da Vercel**
   - **Jira:** n/a
   - **Camada:** full-stack
   - **Problema:** o domínio final ainda não existe. A página pública hoje é a implantação da Vercel, e ela precisa estar na `main` desta sprint.
@@ -87,9 +87,9 @@
     1. Confirmar a implantação de produção da `main` no projeto `rafael-coelho-software`.
     2. Abrir a URL e ler a headline.
     3. Abrir `/privacidade` nessa mesma origem e confirmar status 200 e o título "Política de privacidade".
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** produção pública em `https://rafael-coelho-software-rafaels-projects-f9ecaf31.vercel.app`, com o typecheck ignorando `*.test.ts`
+  - **Resultado:** pass browser — a home mostra "Transforme o que trava na sua operação com inteligência artificial."; `/privacidade` responde 200 com o título "Política de privacidade"
+  - **Achados:** as implantações anteriores falhavam no typecheck porque `lead.test.ts` e `analytics.test.ts` importam `.ts`; `web/tsconfig.json` agora exclui `**/*.test.ts`. A autenticação da Vercel estava em `all_except_custom_domains` e o alias público devolvia 302; passou para `prod_deployment_urls_and_all_previews`, então a URL estável fica aberta e preview e URL com hash continuam protegidos
 
 ---
 
@@ -100,6 +100,7 @@
 3. **Celular** — a prova desta sprint é o viewport 375×812 no browser do agente, mais o desktop. iOS Safari e Android Chrome físicos ficam para quando houver aparelho.
 4. **Domínio** — a publicação desta sprint é a URL de produção da Vercel. `rafaelcoelhosoftware.com.br` continua fora até existir registro.
 5. **Git sem Jira** — branches `s7-01-privacidade`, `s7-02-copy`, `s7-03-qa`, `s7-04-producao`, cada uma a partir de `s7-lancamento` atualizada. `s7-lancamento` nasce de `main`.
+6. **URL pública sem domínio** — a proteção da Vercel em `all_except_custom_domains` escondia o alias `*.vercel.app` atrás de login. A publicação desta sprint usa `prod_deployment_urls_and_all_previews`: a URL estável de produção fica pública e os previews continuam protegidos.
 
 ## Fora de escopo
 
