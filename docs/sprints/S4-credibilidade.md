@@ -72,7 +72,7 @@
   - **Resultado:** pass. Os dois textos aparecem nessa posição. A página não cita fornecedor de modelo.
   - **Achados:** —
 
-- [ ] **4. Sobre com a foto real**
+- [x] **4. Sobre com a foto real**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** a landing ainda não mostra quem faz o trabalho. A foto já está no projeto e não está na página.
@@ -87,9 +87,9 @@
     1. Abrir `http://localhost:3000` e rolar até Sobre.
     2. Confirmar a foto com alt "Rafael Coelho" e os dois parágrafos.
     3. Em 375px, confirmar que a foto não estoura a largura.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Foto `/sobre.png` e os dois parágrafos depois do diferencial de IA.
+  - **Resultado:** pass. A foto tem alt "Rafael Coelho" e carregou. Em 375px ela mede 192px e termina em 208px, sem scroll horizontal.
+  - **Achados:** —
 
 - [ ] **5. Depoimentos vazios**
   - **Jira:** n/a
