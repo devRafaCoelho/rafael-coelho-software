@@ -72,7 +72,7 @@
   - **Resultado:** pass. A `h1`, a subheadline e Neoenergia, Brivia e Auren (borda de 1px) aparecem. Em 375px a headline termina em 359px e não há scroll horizontal.
   - **Achados:** —
 
-- [ ] **4. Seção Dor**
+- [x] **4. Seção Dor**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** a página ainda não descreve o problema que o anúncio precisa encontrar na primeira rolagem.
@@ -87,9 +87,9 @@
     1. Abrir `http://localhost:3000` e rolar até a Dor.
     2. Confirmar o parágrafo e os três itens.
     3. Em 375px, confirmar que a lista permanece dentro da largura.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Seção Dor com o parágrafo da copy e as três dores em lista, abaixo do hero.
+  - **Resultado:** pass. O parágrafo e os três itens aparecem depois da faixa de clientes. Em 375px a seção ocupa a largura da tela e não há scroll horizontal.
+  - **Achados:** —
 
 - [ ] **5. Três pilares em cards**
   - **Jira:** n/a
