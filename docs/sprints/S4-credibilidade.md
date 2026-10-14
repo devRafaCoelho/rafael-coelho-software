@@ -110,7 +110,7 @@
   - **Resultado:** pass. A frase "Nenhum depoimento publicado. A seção fica pronta para receber depois." aparece depois da bio. Não há citação atribuída.
   - **Achados:** —
 
-- [ ] **6. FAQ das objeções de contratação**
+- [x] **6. FAQ das objeções de contratação**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** preço, prazo, contrato, código e suporte ainda não respondem a objeção de quem chega pelo anúncio.
@@ -125,9 +125,9 @@
     1. Abrir `http://localhost:3000` e rolar até o FAQ.
     2. Abrir Preço e confirmar "Não há tabela pública."
     3. Confirmar que Prazo, Contrato PJ, Propriedade do código e Suporte pós-entrega também estão na página.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Accordion com as cinco objeções. Preço abre a resposta de que não há tabela pública.
+  - **Resultado:** pass. As cinco perguntas estão na página. Ao abrir Preço, a resposta começa com "Não há tabela pública."
+  - **Achados:** —
 
 - [ ] **7. Fechamento e rodapé**
   - **Jira:** n/a
