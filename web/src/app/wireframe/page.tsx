@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
+import Image from "next/image";
 
 const HEADLINE =
   "Arquitetura de software sênior, entregue na velocidade da IA.";
@@ -118,6 +119,30 @@ function Blocks({ body }: { body: string }) {
           <h3 key={line} className="text-lg font-medium">
             {line.slice(4)}
           </h3>
+        );
+      }
+      if (line.startsWith("Logo:")) {
+        return (
+          <Image
+            key={line}
+            src="/logo.png"
+            alt="Rafael Coelho"
+            width={64}
+            height={64}
+            className="size-16 object-contain"
+          />
+        );
+      }
+      if (line.startsWith("Foto profissional")) {
+        return (
+          <Image
+            key={line}
+            src="/sobre.png"
+            alt="Rafael Coelho"
+            width={192}
+            height={192}
+            className="size-48 object-cover"
+          />
         );
       }
       if (line.startsWith("Headline:")) {
