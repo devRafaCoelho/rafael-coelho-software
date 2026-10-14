@@ -3,7 +3,7 @@
 **Projeto:** LP Rafael Coelho — Arquitetura de Software  
 **Fonte:** `docs/LP_SoftwareHouse_Documentacao.md` (Sprint 4 e seções 2.1, 3.3) e `docs/s2/copy.md`  
 **Ambiente de teste:** `http://localhost:3000` (app em `web/`). A home já tem Header, Hero, Dor, 3 pilares e Como funciona.  
-**Status geral:** em execução
+**Status geral:** concluído
 
 ## Índice
 
@@ -129,7 +129,7 @@
   - **Resultado:** pass. As cinco perguntas estão na página. Ao abrir Preço, a resposta começa com "Não há tabela pública."
   - **Achados:** —
 
-- [ ] **7. Fechamento e rodapé**
+- [x] **7. Fechamento e rodapé**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** a página de credibilidade termina no FAQ. Falta repetir o convite e o contato, ainda sem o formulário.
@@ -144,9 +144,9 @@
     1. Abrir `http://localhost:3000` e rolar até o fim.
     2. Confirmar a headline, o botão "Falar no WhatsApp" em `rgb(227, 93, 47)` e a ausência de inputs.
     3. Em 375px, confirmar a ordem Cases, Diferencial de IA, Sobre, Depoimentos, FAQ, fechamento e rodapé, sem scroll horizontal.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Headline de fechamento, botão sem destino e rodapé com LinkedIn. A política continua só como texto.
+  - **Resultado:** pass. O botão final está em `rgb(227, 93, 47)`, não há inputs, e o LinkedIn aponta para o perfil. Em 375px a ordem das seções novas está certa e não há scroll horizontal.
+  - **Achados:** —
 
 ---
 
