@@ -54,7 +54,7 @@
   - **Resultado:** pass browser — sem `googletagmanager.com` no HTML; clique do hero gravou `whatsapp_click` com `local` `hero`; o fim da página gravou `scroll_depth` 100; o envio chegou em `/obrigado` com `generate_lead` sem campos extras
   - **Achados:** —
 
-- [ ] **3. SEO técnico**
+- [x] **3. SEO técnico**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** a página não declara Open Graph, dado estruturado, sitemap nem robots. Um anúncio que compartilha o link não tem título nem descrição estáveis.
@@ -69,9 +69,9 @@
     1. Abrir `http://localhost:3000` e ler as meta `og:title` e `og:description`, mais o script `application/ld+json`.
     2. Abrir `http://localhost:3000/sitemap.xml` e confirmar `/` e `/obrigado`.
     3. Abrir `http://localhost:3000/robots.txt` e confirmar `Disallow: /wireframe` e a linha do sitemap.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Open Graph e JSON-LD no layout, `sitemap.ts` e `robots.ts`
+  - **Resultado:** pass browser — `og:title` e `og:description` iguais ao texto publicado; JSON-LD `ProfessionalService` sem telefone nem preço; sitemap lista `/` e `/obrigado`; robots bloqueia `/wireframe` e aponta o sitemap
+  - **Achados:** —
 
 - [ ] **4. Core Web Vitals da home**
   - **Jira:** n/a
