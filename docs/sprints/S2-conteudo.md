@@ -1,7 +1,7 @@
 # Conteúdo, copy e wireframe — (branch `s2-conteudo`)
 
 **Projeto:** LP Rafael Coelho — Arquitetura de Software  
-**Fonte:** `LP_SoftwareHouse_Documentacao.md` (Sprint 2, seções 2, 2.1, 3.3, 3.4 e 3.7) e `CV_Rafael_Coelho_v2.md`  
+**Fonte:** `docs/LP_SoftwareHouse_Documentacao.md` (Sprint 2, seções 2, 2.1, 3.3, 3.4 e 3.7) e `docs/CV_Rafael_Coelho_v2.md`  
 **Ambiente de teste:** `http://localhost:3000/wireframe` (app em `web/`). O teste da copy roda com `node --test` em `docs/s2/`.  
 **Status geral:** concluído
 
@@ -20,8 +20,8 @@
   - **Camada:** front
   - **Problema:** a landing ainda não tem texto fechado. Sem esse documento, a Sprint 3 codaria seção por seção no escuro.
   - **Onde:** `docs/s2/copy.md` e `docs/s2/copy.test.mjs` (ambos ainda inexistentes).
-  - **Fix:** escrever a copy das 12 seções da seção 3.3, nesta ordem: Header, Hero, Dor, 3 pilares, Como funciona, Cases (Neoenergia, Brivia, Auren e, em faixa separada, Pet Sampas e Estoque Inteligente), Diferencial de IA, Sobre, Depoimentos, FAQ, CTA final, Footer. Headline provisória do Hero: "Arquitetura de software sênior, entregue na velocidade da IA." CTA de ação: "Falar no WhatsApp". Sem preço. Cases no formato problema → decisão de arquitetura → resultado, só com fatos de `CV_Rafael_Coelho_v2.md` e da seção 2.1. Pet Sampas no ar em `petsampas.com.br`, apps aguardando aprovação da Apple e do Google. Estoque Inteligente hospedado e em reimplementação. Depoimentos: seção presente e vazia, sem frase atribuída a cliente. FAQ: preço, prazo, contrato PJ, propriedade do código, suporte pós-entrega. Formulário do CTA final só como lista de campos (nome, empresa, e-mail, WhatsApp, mensagem, faixa de orçamento, consentimento LGPD), sem implementação. Criar `docs/s2/copy.test.mjs` com `node:test` garantindo as 12 seções, a headline exata, os dois status de produto e a ausência de fornecedor de modelo. Branch desta task: `s2-01-copy`, a partir de `s2-conteudo`.
-  - **Precedente:** seções 2, 2.1 e 3.3 de `LP_SoftwareHouse_Documentacao.md`.
+  - **Fix:** escrever a copy das 12 seções da seção 3.3, nesta ordem: Header, Hero, Dor, 3 pilares, Como funciona, Cases (Neoenergia, Brivia, Auren e, em faixa separada, Pet Sampas e Estoque Inteligente), Diferencial de IA, Sobre, Depoimentos, FAQ, CTA final, Footer. Headline provisória do Hero: "Arquitetura de software sênior, entregue na velocidade da IA." CTA de ação: "Falar no WhatsApp". Sem preço. Cases no formato problema → decisão de arquitetura → resultado, só com fatos de `docs/CV_Rafael_Coelho_v2.md` e da seção 2.1. Pet Sampas no ar em `petsampas.com.br`, apps aguardando aprovação da Apple e do Google. Estoque Inteligente hospedado e em reimplementação. Depoimentos: seção presente e vazia, sem frase atribuída a cliente. FAQ: preço, prazo, contrato PJ, propriedade do código, suporte pós-entrega. Formulário do CTA final só como lista de campos (nome, empresa, e-mail, WhatsApp, mensagem, faixa de orçamento, consentimento LGPD), sem implementação. Criar `docs/s2/copy.test.mjs` com `node:test` garantindo as 12 seções, a headline exata, os dois status de produto e a ausência de fornecedor de modelo. Branch desta task: `s2-01-copy`, a partir de `s2-conteudo`.
+  - **Precedente:** seções 2, 2.1 e 3.3 de `docs/LP_SoftwareHouse_Documentacao.md`.
   - **Aceite:** `node --test docs/s2/copy.test.mjs` passa, e o arquivo não cita Claude, ChatGPT, OpenAI, Anthropic nem Cursor.
   - **Validação:** mock
   - **Suite / spec:** `docs/s2/copy.test.mjs` (criar)
@@ -57,9 +57,9 @@
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** o wireframe ainda não mostra quem é a pessoa nem a marca. A foto e o logo já existem na raiz e não entraram na página.
-  - **Onde:** `rafael-coelho-sobre.png`, `rafael-coelho-logo.png`, `web/public/` e a seção Sobre de `web/src/app/wireframe/page.tsx`. Favicon em `web/src/app/`.
-  - **Fix:** usar `rafael-coelho-sobre.png` como foto da seção Sobre (não gerar outra). Usar `rafael-coelho-logo.png` no header. Gerar um avatar quadrado simplificado a partir dessa foto e usá-lo como favicon do app. Não publicar o avatar no WhatsApp. Branch desta task: `s2-03-assets`, a partir de `s2-conteudo` atualizada.
-  - **Precedente:** seção 3.4 de `LP_SoftwareHouse_Documentacao.md` (foto real na seção Sobre; avatar derivado para favicon).
+  - **Onde:** `docs/rafael-coelho-sobre.png`, `docs/rafael-coelho-logo.png`, `web/public/` e a seção Sobre de `web/src/app/wireframe/page.tsx`. Favicon em `web/src/app/`.
+  - **Fix:** usar `docs/rafael-coelho-sobre.png` como foto da seção Sobre (não gerar outra). Usar `docs/rafael-coelho-logo.png` no header. Gerar um avatar quadrado simplificado a partir dessa foto e usá-lo como favicon do app. Não publicar o avatar no WhatsApp. Branch desta task: `s2-03-assets`, a partir de `s2-conteudo` atualizada.
+  - **Precedente:** seção 3.4 de `docs/LP_SoftwareHouse_Documentacao.md` (foto real na seção Sobre; avatar derivado para favicon).
   - **Aceite:** em `/wireframe`, o header mostra o logo, a seção Sobre mostra a foto, e a aba do browser deixa de usar o ícone padrão do Next.
   - **Validação:** browser
   - **Suite / spec:** n/a
@@ -81,7 +81,7 @@
 3. **IA sem fornecedor** — a copy não cita Claude, ChatGPT, OpenAI, Anthropic nem Cursor.
 4. **Depoimentos** — a seção existe e fica vazia. Nenhuma frase é inventada.
 5. **Logos de cliente** — Neoenergia, Brivia e Auren aparecem como nome em um retângulo. Os arquivos de logo não estão no repositório e não bloqueiam esta sprint.
-6. **Foto** — `rafael-coelho-sobre.png` é a foto da seção Sobre. Não há sessão fotográfica nova nesta sprint.
+6. **Foto** — `docs/rafael-coelho-sobre.png` é a foto da seção Sobre. Não há sessão fotográfica nova nesta sprint.
 7. **Wireframe no app, não no Figma** — a rota `/wireframe` é a baixa fidelidade que dá para validar em 375px. A home da Sprint 1 não vira a landing.
 8. **Paleta** — permanecem papel `#F4F1EA`, tinta `#14181F`, primária `#163A45` e CTA `#E35D2F`.
 9. **Formulário** — só os campos desenhados. Envio, API e WhatsApp com mensagem pronta ficam na Sprint 5.

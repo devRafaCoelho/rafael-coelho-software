@@ -1,7 +1,7 @@
 # Setup técnico e design system — (branch `s1-setup-tecnico`)
 
 **Projeto:** LP Rafael Coelho — Arquitetura de Software  
-**Fonte:** `LP_SoftwareHouse_Documentacao.md` (Sprint 1)  
+**Fonte:** `docs/LP_SoftwareHouse_Documentacao.md` (Sprint 1)  
 **Ambiente de teste:** `http://localhost:3000` (app em `web/`). Preview: `https://web-chi-pied-78.vercel.app`  
 **Status geral:** concluído
 
@@ -21,7 +21,7 @@
   - **Problema:** a pasta do projeto só tem documentos e imagens. Não existe git nem aplicação.
   - **Onde:** raiz do repositório e `web/` (ainda inexistente).
   - **Fix:** `git init` na raiz, branch `main`, em seguida a principal do lote `s1-setup-tecnico`. Scaffold com `create-next-app` em `web/` (`--typescript --tailwind --eslint --app --src-dir --import-alias "@/*" --use-npm`). `.gitignore` na raiz só para arquivos de sistema, sem substituir o `.gitignore` do app. Branch desta task: `s1-01-scaffold`, criada a partir de `s1-setup-tecnico`.
-  - **Precedente:** seção 3.1 de `LP_SoftwareHouse_Documentacao.md` (Next.js, App Router, TypeScript).
+  - **Precedente:** seção 3.1 de `docs/LP_SoftwareHouse_Documentacao.md` (Next.js, App Router, TypeScript).
   - **Aceite:** `npm run build` em `web/` termina sem erro e `http://localhost:3000` abre a página gerada pelo scaffold.
   - **Validação:** browser
   - **Suite / spec:** n/a
@@ -40,7 +40,7 @@
   - **Problema:** o scaffold não traz o kit de UI, o formatador nem a biblioteca de movimento previstos para a LP.
   - **Onde:** `web/package.json`, `web/components.json`, `web/src/components/ui/`, `web/.prettierrc`.
   - **Fix:** `shadcn init` no app já criado; adicionar os componentes `button` e `card`; Prettier com script `format`; instalar `framer-motion`. Na home, renderizar um botão shadcn e um bloco com `motion`. Branch desta task: `s1-02-tooling`, a partir de `s1-setup-tecnico` atualizada.
-  - **Precedente:** seção 3.2 de `LP_SoftwareHouse_Documentacao.md` (Tailwind, shadcn/ui, Framer Motion). Não copiar o TanStack Start do Pet Sampas.
+  - **Precedente:** seção 3.2 de `docs/LP_SoftwareHouse_Documentacao.md` (Tailwind, shadcn/ui, Framer Motion). Não copiar o TanStack Start do Pet Sampas.
   - **Aceite:** `npm run lint` em `web/` termina sem erro novo; o browser mostra o botão shadcn e o bloco animado na home.
   - **Validação:** browser
   - **Suite / spec:** n/a
@@ -59,7 +59,7 @@
   - **Problema:** cores e fontes ainda são as do template, não as da marca.
   - **Onde:** `web/src/app/globals.css`, `web/src/app/layout.tsx`, `web/src/app/page.tsx`.
   - **Fix:** definir os tokens no `@theme` de `globals.css` (Tailwind v4 não usa `tailwind.config`). Papel `#F4F1EA`, tinta `#14181F`, primária `#163A45`, CTA `#E35D2F`. Fontes via `next/font`: Newsreader nos títulos, Source Sans 3 no texto. A home vira página-espécime: quatro amostras, uma escala de título e texto, um botão na cor de CTA e um card neutro. Rótulos técnicos apenas ("Primária", "CTA"). Sem dark mode. Branch desta task: `s1-03-tokens`, a partir de `s1-setup-tecnico` atualizada.
-  - **Precedente:** seção 3.4 de `LP_SoftwareHouse_Documentacao.md` (uma primária, um neutro escuro, um neutro claro, uma cor de CTA, duas fontes via `next/font`).
+  - **Precedente:** seção 3.4 de `docs/LP_SoftwareHouse_Documentacao.md` (uma primária, um neutro escuro, um neutro claro, uma cor de CTA, duas fontes via `next/font`).
   - **Aceite:** em 375px e no desktop, as quatro cores e as duas fontes aparecem, e o botão de ação usa `#E35D2F`.
   - **Validação:** browser
   - **Suite / spec:** n/a
@@ -78,7 +78,7 @@
   - **Problema:** o app só existe na máquina local.
   - **Onde:** projeto Vercel com root directory `web/`.
   - **Fix:** deploy pelo Vercel CLI a partir de `web/`, sem domínio customizado. Registrar a URL `*.vercel.app` neste card. Branch desta task: `s1-04-preview`, a partir de `s1-setup-tecnico` atualizada.
-  - **Precedente:** entregável da Sprint 1 em `LP_SoftwareHouse_Documentacao.md` (projeto em URL de preview). O apontamento do domínio fica para quando `rafaelcoelhosoftware.com.br` existir.
+  - **Precedente:** entregável da Sprint 1 em `docs/LP_SoftwareHouse_Documentacao.md` (projeto em URL de preview). O apontamento do domínio fica para quando `rafaelcoelhosoftware.com.br` existir.
   - **Aceite:** a URL `*.vercel.app` abre a mesma página-espécime (amostras, botão CTA, card).
   - **Validação:** browser
   - **Suite / spec:** n/a
@@ -109,7 +109,7 @@
 ## Fora de escopo
 
 - Registro de `rafaelcoelhosoftware.com.br`, DNS, e-mail, WhatsApp, logos de clientes e política de privacidade — Sprint 0.
-- Copy, wireframe, foto e favicon — Sprint 2. As imagens já na raiz (`avatar.png`, `rafael-coelho-logo.png`, `rafael-coelho-sobre.png`) não entram na página-espécime.
+- Copy, wireframe, foto e favicon — Sprint 2. As imagens já em `docs/` (`avatar.png`, `rafael-coelho-logo.png`, `rafael-coelho-sobre.png`) não entram na página-espécime.
 - Seções da LP, formulário, analytics e anúncios — Sprints 3 a 8.
 - Preview automático por pull request no GitHub — o deploy desta sprint é pelo Vercel CLI.
 - Dark mode — decisão 6.
