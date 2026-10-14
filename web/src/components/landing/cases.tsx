@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 const CLIENTS = [
   {
     name: "Neoenergia",
@@ -28,6 +30,39 @@ const CLIENTS = [
   },
 ];
 
+const PRODUCTS: {
+  name: string;
+  problem: string;
+  decision: string;
+  result: ReactNode;
+}[] = [
+  {
+    name: "Pet Sampas",
+    problem:
+      "a vida do pet fica espalhada entre gaveta, WhatsApp e memória, e o histórico se perde na hora da consulta.",
+    decision:
+      "SaaS de prontuário e carteira digital, com o acesso do cliente ao banco sob regras de segurança e pagamento e e-mail só no servidor. A mesma base web segue para iOS e Android.",
+    result: (
+      <>
+        produto no ar em{" "}
+        <a href="https://petsampas.com.br" className="underline">
+          petsampas.com.br
+        </a>
+        . Os apps aguardam aprovação da Apple e do Google.
+      </>
+    ),
+  },
+  {
+    name: "Estoque Inteligente",
+    problem:
+      "o estoque de casa depende da memória, e uma resposta errada da IA não pode gravar um item que não existe.",
+    decision:
+      "PWA com API em camadas. Texto, voz, foto ou nota fiscal passam por rascunho, revisão e confirmação antes de escrever no estoque.",
+    result:
+      "produto hospedado e em reimplementação. É um case de arquitetura em evolução, não um lançamento encerrado.",
+  },
+];
+
 function CaseBlock({
   name,
   problem,
@@ -37,7 +72,7 @@ function CaseBlock({
   name: string;
   problem: string;
   decision: string;
-  result: string;
+  result: ReactNode;
 }) {
   return (
     <article className="flex flex-col gap-3">
@@ -57,6 +92,12 @@ export function Cases() {
       <div className="flex flex-col gap-6">
         <h2 className="font-heading text-2xl">Clientes</h2>
         {CLIENTS.map((item) => (
+          <CaseBlock key={item.name} {...item} />
+        ))}
+      </div>
+      <div className="flex flex-col gap-6">
+        <h2 className="font-heading text-2xl">Produtos próprios</h2>
+        {PRODUCTS.map((item) => (
           <CaseBlock key={item.name} {...item} />
         ))}
       </div>

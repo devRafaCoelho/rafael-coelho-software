@@ -34,7 +34,7 @@
   - **Resultado:** pass. Os três cases aparecem com Problema, Decisão de arquitetura e Resultado, sem links. Em 375px a borda termina em 359px e não há scroll horizontal.
   - **Achados:** —
 
-- [ ] **2. Produtos próprios**
+- [x] **2. Produtos próprios**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** Pet Sampas e Estoque Inteligente provam que o trabalho chega em produção, e a página ainda não conta isso.
@@ -49,9 +49,9 @@
     1. Abrir `http://localhost:3000` e rolar até Produtos próprios.
     2. Confirmar o link `petsampas.com.br` e a frase de que os apps aguardam aprovação da Apple e do Google.
     3. Confirmar que Estoque Inteligente diz que está hospedado e em reimplementação.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Grupo Produtos próprios depois dos clientes, com o link só em Pet Sampas.
+  - **Resultado:** pass. O único link da página é `https://petsampas.com.br/`. O texto dos apps e o de reimplementação do Estoque Inteligente aparecem.
+  - **Achados:** —
 
 - [ ] **3. Diferencial de IA**
   - **Jira:** n/a
