@@ -34,7 +34,7 @@
   - **Resultado:** pass. `npm run build` concluiu sem erro. No browser, `http://localhost:3000/` abriu com título "Create Next App" e o texto "To get started, edit the page.tsx file."
   - **Achados:** o dev server avisa que o Turbopack ignorou um `package-lock.json` em `c:\Users\rafac` (fora deste repo) e sugere `turbopack.root`. O build e a página passaram mesmo assim.
 
-- [ ] **2. shadcn, Prettier e Framer Motion**
+- [x] **2. shadcn, Prettier e Framer Motion**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** o scaffold não traz o kit de UI, o formatador nem a biblioteca de movimento previstos para a LP.
@@ -49,9 +49,9 @@
     1. Rodar `npm run lint` em `web/`.
     2. Abrir `http://localhost:3000`.
     3. Confirmar o botão shadcn e o bloco com `motion` visíveis.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** shadcn init com base Radix (`radix-nova`), componentes `button` e `card`, Prettier (`format` + `.prettierrc`) e `framer-motion`. A home mostra um `Button` e um bloco `motion`.
+  - **Resultado:** pass. `npm run lint` terminou sem erro. No browser, `http://localhost:3000/` mostra o botão "Botão" e o bloco "Bloco com motion".
+  - **Achados:** a primeira chamada do `shadcn init` parou num prompt interativo e não gravou arquivos. A segunda, com `--defaults` e `--base radix`, concluiu.
 
 - [ ] **3. Tokens e página-espécime**
   - **Jira:** n/a
