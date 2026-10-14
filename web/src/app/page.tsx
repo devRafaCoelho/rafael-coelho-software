@@ -6,7 +6,7 @@ import { Process } from "@/components/landing/process";
 
 export default function Home() {
   return (
-    <main>
+    <main className="pt-24">
       <Header />
       <Hero />
       <Pain />

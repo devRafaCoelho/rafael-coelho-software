@@ -34,7 +34,7 @@
   - **Resultado:** pass. A aba em `/` é "Rafael Coelho — Arquitetura de Software" e a página não lista as amostras. `/design-system` mostra Papel, Tinta, Primária e CTA, com a aba "Design system".
   - **Achados:** —
 
-- [ ] **2. Header com logo e um CTA**
+- [x] **2. Header com logo e um CTA**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** a landing não tem o header mínimo da seção 3.3: marca e um único caminho de conversão, sem menu.
@@ -49,9 +49,9 @@
     1. Abrir `http://localhost:3000` em largura de desktop.
     2. Confirmar o logo, o texto do botão e o fundo `rgb(227, 93, 47)`.
     3. Repetir em 375px e confirmar que logo e botão cabem na mesma linha, sem scroll horizontal.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Header fixo com `/logo.png` e um botão "Falar no WhatsApp" que não navega.
+  - **Resultado:** pass. No desktop (1347px) o botão está em `rgb(227, 93, 47)`, o logo tem alt "Rafael Coelho" e o header não tem links. Em 375px logo e botão ficam na mesma linha, sem scroll horizontal.
+  - **Achados:** —
 
 - [ ] **3. Hero com headline, CTA e faixa de clientes**
   - **Jira:** n/a
