@@ -3,7 +3,7 @@
 **Projeto:** LP Rafael Coelho — Arquitetura de Software  
 **Fonte:** `docs/LP_SoftwareHouse_Documentacao.md` (Sprint 6 e seção 4)  
 **Ambiente de teste:** `http://localhost:3000` (app em `web/`). O teste do módulo de analytics roda com `node --experimental-strip-types --test` a partir de `web/`.  
-**Status geral:** em execução
+**Status geral:** concluído
 
 ## Índice
 
@@ -73,7 +73,7 @@
   - **Resultado:** pass browser — `og:title` e `og:description` iguais ao texto publicado; JSON-LD `ProfessionalService` sem telefone nem preço; sitemap lista `/` e `/obrigado`; robots bloqueia `/wireframe` e aponta o sitemap
   - **Achados:** —
 
-- [ ] **4. Core Web Vitals da home**
+- [x] **4. Core Web Vitals da home**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** a sprint pede a medição de LCP e CLS antes de qualquer anúncio. A home ainda não tem esse número registrado.
@@ -88,9 +88,9 @@
     1. Rodar Lighthouse em `http://localhost:3000` no viewport mobile.
     2. Anotar LCP e CLS.
     3. Se um dos dois estourar o limite, corrigir e repetir até os dois passarem.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** medição da home no viewport mobile, sem mudança de layout
+  - **Resultado:** pass browser — LCP 1894 ms e CLS 0,00, com CPU 4× e Slow 4G. Os dois ficam dentro do limite, então o layout não mudou.
+  - **Achados:** a maior parte do LCP é atraso de render (1729 ms), não o download. O relatório estima zero de ganho ao mexer nos pedidos que bloqueiam a renderização.
 
 ---
 
