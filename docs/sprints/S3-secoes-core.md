@@ -3,7 +3,7 @@
 **Projeto:** LP Rafael Coelho — Arquitetura de Software  
 **Fonte:** `docs/LP_SoftwareHouse_Documentacao.md` (Sprint 3, seções 3.2, 3.3 e 3.4) e `docs/s2/copy.md`  
 **Ambiente de teste:** `http://localhost:3000` (app em `web/`). A rota `/wireframe` permanece o rascunho da Sprint 2.  
-**Status geral:** em execução
+**Status geral:** concluído
 
 ## Índice
 
@@ -129,7 +129,7 @@
   - **Resultado:** pass. Os quatro textos aparecem nessa ordem, com numeração decimal. Em 375px não há scroll horizontal.
   - **Achados:** —
 
-- [ ] **7. Entrada leve por scroll**
+- [x] **7. Entrada leve por scroll**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** as seções abaixo da dobra entram secas, e a Sprint 3 pede fluidez sem pesar a primeira pintura.
@@ -144,9 +144,9 @@
     1. Abrir `http://localhost:3000` e confirmar headline e botão do header sem rolar.
     2. Rolar até o fim e confirmar que as três seções de baixo estão visíveis, com o texto da copy.
     3. Em 375px, confirmar a ordem das cinco seções e a ausência de scroll horizontal.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** `Reveal` envolve só Dor, Pilares e Como funciona, com entrada por scroll uma vez.
+  - **Resultado:** pass. Sem rolar, a headline e o botão do header estão visíveis. Depois de rolar, as três seções ficam com opacidade 1 e o texto da copy. Em 375px a ordem é Header, Hero, Dor, pilares e Como funciona, sem scroll horizontal.
+  - **Achados:** —
 
 ---
 
