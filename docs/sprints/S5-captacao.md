@@ -34,7 +34,7 @@
   - **Resultado:** pass mock — 3 testes, e-mail inválido, faixa fora da lista e consentimento falso falham; a URL contém `5571984570082` e a mensagem
   - **Achados:** —
 
-- [ ] **2. Formulário no fechamento**
+- [x] **2. Formulário no fechamento**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** o fechamento repete a headline e o botão, mas não coleta o lead.
@@ -49,9 +49,9 @@
     1. Abrir `http://localhost:3000` e rolar até o fechamento.
     2. Confirmar os campos Nome, Empresa, E-mail, WhatsApp, Mensagem, Faixa de orçamento e o checkbox. O botão Enviar começa desabilitado.
     3. Marcar o checkbox, preencher o e-mail com "nao-e-email" e os outros campos com texto válido, escolher uma faixa e acionar Enviar. Confirmar a mensagem de e-mail inválido e que a URL continua `/`.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** formulário em `web/src/components/landing/lead-form.tsx`, montado no fechamento
+  - **Resultado:** pass browser — Enviar começa desabilitado; com o checkbox marcado e e-mail "nao-e-email", a página mostra "E-mail inválido" e permanece em `/`
+  - **Achados:** o overlay de hidratação do accordion continua o mesmo da sprint 4, só com `data-cursor-ref` do browser
 
 - [ ] **3. API que recebe o lead**
   - **Jira:** n/a

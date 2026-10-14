@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { LeadForm } from "@/components/landing/lead-form";
 
 export function Closing() {
   return (
@@ -6,6 +7,7 @@ export function Closing() {
       <h2 className="font-heading text-3xl text-balance">
         Transforme o que trava na sua operação com inteligência artificial.
       </h2>
+      <LeadForm />
       <Button
         type="button"
         className="w-fit bg-cta text-cta-foreground hover:bg-cta/90"
