@@ -1,6 +1,8 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { budgetBands, leadSchema, type Lead } from "@/lib/lead";
@@ -25,12 +27,28 @@ export function LeadForm() {
     },
   });
   const consent = watch("consent");
+  const router = useRouter();
+  const [sendError, setSendError] = useState<string | null>(null);
 
   return (
     <form
       className="flex flex-col gap-3"
       noValidate
-      onSubmit={handleSubmit(() => undefined)}
+      onSubmit={handleSubmit(async (values) => {
+        setSendError(null);
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(values),
+        });
+        if (!response.ok) {
+          setSendError(
+            "Não foi possível enviar. Tente de novo ou fale no WhatsApp.",
+          );
+          return;
+        }
+        router.push("/obrigado");
+      })}
     >
       <label className="flex flex-col gap-1 text-sm">
         Nome
@@ -75,6 +93,9 @@ export function LeadForm() {
         <input type="checkbox" className="mt-1" {...register("consent")} />
         Concordo em ser contatado sobre este pedido.
       </label>
+      {sendError ? (
+        <p className="text-sm text-destructive">{sendError}</p>
+      ) : null}
       <Button
         type="submit"
         disabled={!consent}

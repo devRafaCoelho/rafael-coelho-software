@@ -3,7 +3,7 @@
 **Projeto:** LP Rafael Coelho — Arquitetura de Software  
 **Fonte:** `docs/LP_SoftwareHouse_Documentacao.md` (Sprint 5 e seção 3.7) e `docs/s2/copy.md` (CTA final)  
 **Ambiente de teste:** `http://localhost:3000` (app em `web/`). O teste do schema e da API roda com `node --experimental-strip-types --test` a partir de `web/`.  
-**Status geral:** em execução
+**Status geral:** concluído
 
 ## Índice
 
@@ -91,7 +91,7 @@
   - **Resultado:** pass browser — os três links têm o mesmo `href` com `5571984570082` e a mensagem, `target="_blank"`; o header só tem esse link
   - **Achados:** —
 
-- [ ] **5. Agradecimento depois do envio**
+- [x] **5. Agradecimento depois do envio**
   - **Jira:** n/a
   - **Camada:** full-stack
   - **Problema:** um envio válido não leva a lugar nenhum. A pessoa não sabe se o pedido foi recebido nem tem o atalho da conversa.
@@ -106,9 +106,9 @@
     1. Abrir `http://localhost:3000`, rolar até o formulário e preencher nome, empresa, e-mail `rafael@example.com`, WhatsApp, mensagem e uma faixa.
     2. Marcar o consentimento e enviar.
     3. Confirmar a URL `/obrigado`, uma frase de agradecimento e o link `wa.me/5571984570082`.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** o formulário faz POST em `/api/contact` e a página `web/src/app/obrigado/page.tsx` agradece
+  - **Resultado:** pass browser — lead válido em `/` foi para `/obrigado`, com "Pedido recebido. Vou responder em seguida." e o link `wa.me/5571984570082`. Sem preço na tela.
+  - **Achados:** —
 
 ---
 
