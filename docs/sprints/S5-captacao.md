@@ -72,7 +72,7 @@
   - **Resultado:** pass mock — 6 testes; sem consentimento responde 400; sem variáveis não chama a rede; com Resend e webhook, `fetch` vai para `api.resend.com/emails` e para a URL do webhook
   - **Achados:** o remetente usa `LEAD_FROM_EMAIL` e, sem essa variável, cai em `onboarding@resend.dev` até existir domínio
 
-- [ ] **4. WhatsApp com mensagem pronta**
+- [x] **4. WhatsApp com mensagem pronta**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** os botões "Falar no WhatsApp" não abrem conversa.
@@ -87,9 +87,9 @@
     1. Abrir `http://localhost:3000`.
     2. Confirmar que os três links "Falar no WhatsApp" têm o mesmo `href`, com `5571984570082` e o texto da mensagem, e `target="_blank"`.
     3. Confirmar que o header só tem esse link, além da marca que não é link.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** header, hero e fechamento apontam para a URL de `web/src/lib/lead.ts`
+  - **Resultado:** pass browser — os três links têm o mesmo `href` com `5571984570082` e a mensagem, `target="_blank"`; o header só tem esse link
+  - **Achados:** —
 
 - [ ] **5. Agradecimento depois do envio**
   - **Jira:** n/a
