@@ -53,7 +53,7 @@
   - **Resultado:** pass browser — Enviar começa desabilitado; com o checkbox marcado e e-mail "nao-e-email", a página mostra "E-mail inválido" e permanece em `/`
   - **Achados:** o overlay de hidratação do accordion continua o mesmo da sprint 4, só com `data-cursor-ref` do browser
 
-- [ ] **3. API que recebe o lead**
+- [x] **3. API que recebe o lead**
   - **Jira:** n/a
   - **Camada:** back
   - **Problema:** não existe para onde o formulário mandar o pedido. E-mail corporativo e planilha ainda não existem.
@@ -68,9 +68,9 @@
     1. Rodar `node --experimental-strip-types --test src/lib/lead.test.ts` em `web/`.
     2. Confirmar falha em payload sem consentimento.
     3. Confirmar que, com as variáveis de ambiente simuladas no teste, `fetch` foi chamado para Resend e para o webhook.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** `receiveLead` e `deliverLead` em `web/src/lib/lead.ts`, rota `POST /api/contact`
+  - **Resultado:** pass mock — 6 testes; sem consentimento responde 400; sem variáveis não chama a rede; com Resend e webhook, `fetch` vai para `api.resend.com/emails` e para a URL do webhook
+  - **Achados:** o remetente usa `LEAD_FROM_EMAIL` e, sem essa variável, cai em `onboarding@resend.dev` até existir domínio
 
 - [ ] **4. WhatsApp com mensagem pronta**
   - **Jira:** n/a

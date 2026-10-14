@@ -23,3 +23,62 @@ const whatsappMessage =
   "Olá, Rafael. Quero conversar sobre o que está travando na minha operação.";
 
 export const whatsappUrl = `https://wa.me/5571984570082?text=${encodeURIComponent(whatsappMessage)}`;
+
+export type LeadEnv = {
+  RESEND_API_KEY?: string;
+  LEAD_TO_EMAIL?: string;
+  LEAD_FROM_EMAIL?: string;
+  LEAD_WEBHOOK_URL?: string;
+};
+
+export async function receiveLead(
+  input: unknown,
+  deliver: (lead: Lead) => Promise<void>,
+): Promise<{ status: number; body: { ok: boolean } }> {
+  const parsed = leadSchema.safeParse(input);
+  if (!parsed.success) return { status: 400, body: { ok: false } };
+  await deliver(parsed.data);
+  return { status: 200, body: { ok: true } };
+}
+
+export async function deliverLead(
+  lead: Lead,
+  env: LeadEnv,
+  fetchImpl: typeof fetch = fetch,
+): Promise<void> {
+  const jobs: Promise<Response>[] = [];
+  if (env.RESEND_API_KEY && env.LEAD_TO_EMAIL) {
+    jobs.push(
+      fetchImpl("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${env.RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: env.LEAD_FROM_EMAIL ?? "Rafael Coelho <onboarding@resend.dev>",
+          to: env.LEAD_TO_EMAIL,
+          subject: "Novo pedido de conversa",
+          text: [
+            lead.name,
+            lead.company,
+            lead.email,
+            lead.whatsapp,
+            lead.budget,
+            lead.message,
+          ].join("\n"),
+        }),
+      }),
+    );
+  }
+  if (env.LEAD_WEBHOOK_URL) {
+    jobs.push(
+      fetchImpl(env.LEAD_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(lead),
+      }),
+    );
+  }
+  await Promise.all(jobs);
+}
