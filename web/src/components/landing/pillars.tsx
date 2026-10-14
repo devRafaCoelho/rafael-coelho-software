@@ -15,7 +15,7 @@ const PILLARS = [
     body: "A IA entra no desenho do sistema e no jeito de construir. Ela acelera a entrega com controle, revisão e qualidade.",
   },
   {
-    title: "Senioridade",
+    title: "Experiência",
     body: "Problemas reais em energia, educação e fintech, e produto próprio tirado do zero até produção.",
   },
 ];

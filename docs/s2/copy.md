@@ -8,9 +8,9 @@ CTA: Falar no WhatsApp
 
 ## Hero
 
-Headline: Arquitetura de software sênior, entregue na velocidade da IA.
+Headline: Transforme o que trava na sua operação com inteligência artificial.
 
-Subheadline: Você fala direto com quem arquiteta e constrói. Sem júnior no meio e sem gerente de conta traduzindo o pedido.
+Subheadline: Você fala direto com quem entende o problema e constrói a solução. Sem repasse no meio e sem gerente de conta traduzindo o pedido.
 
 CTA: Falar no WhatsApp
 
@@ -32,7 +32,7 @@ Arquitetura. A entrega não é só a interface. É a estrutura que escala e não
 
 IA. A IA entra no desenho do sistema e no jeito de construir. Ela acelera a entrega com controle, revisão e qualidade.
 
-Senioridade. Problemas reais em energia, educação e fintech, e produto próprio tirado do zero até produção.
+Experiência. Problemas reais em energia, educação e fintech, e produto próprio tirado do zero até produção.
 
 ## Como funciona
 
@@ -97,9 +97,9 @@ Isso encurta a entrega sem abrir mão da estrutura. A ferramenta pode mudar. O q
 
 Foto profissional.
 
-Eu arquiteto e construo. Você fala comigo, não com um júnior e não com um gerente de conta.
+Eu entendo o problema e construo a solução. Você fala comigo, sem repasse e sem gerente de conta.
 
-Energia, educação e fintech, e produto próprio do zero até produção. Arquitetura, IA e senioridade no mesmo trabalho.
+Energia, educação e fintech, e produto próprio do zero até produção. Arquitetura, IA e experiência no mesmo trabalho.
 
 ## Depoimentos
 
@@ -129,7 +129,7 @@ Depois da entrega, a evolução contínua pode virar retainer mensal. Sem retain
 
 ## CTA final
 
-Headline: Arquitetura de software sênior, entregue na velocidade da IA.
+Headline: Transforme o que trava na sua operação com inteligência artificial.
 
 CTA: Falar no WhatsApp
 

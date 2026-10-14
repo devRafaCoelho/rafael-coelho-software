@@ -3,7 +3,7 @@ import path from "node:path";
 import Image from "next/image";
 
 const HEADLINE =
-  "Arquitetura de software sênior, entregue na velocidade da IA.";
+  "Transforme o que trava na sua operação com inteligência artificial.";
 const CTA = "Falar no WhatsApp";
 const CLIENTS = ["Neoenergia", "Brivia", "Auren"];
 

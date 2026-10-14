@@ -29,11 +29,15 @@ test("a copy tem as 12 seções na ordem do funil", () => {
   }
 });
 
-test("a headline provisória está escrita por extenso", () => {
+test("a headline está escrita por extenso", () => {
   assert.match(
     copy,
-    /Arquitetura de software sênior, entregue na velocidade da IA\./,
+    /Transforme o que trava na sua operação com inteligência artificial\./,
   );
+});
+
+test("a copy não usa júnior, sênior nem senioridade", () => {
+  assert.doesNotMatch(copy, /júnior|junior|sênior|senioridade|\bsenior\b/i);
 });
 
 test("Pet Sampas e Estoque Inteligente publicam o status real", () => {

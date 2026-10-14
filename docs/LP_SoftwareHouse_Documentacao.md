@@ -1,6 +1,6 @@
 # Documentação de Produto — Landing Page da Software House
 
-> Baseado no posicionamento definido em `CV_Rafael_Coelho_v2.md`, com um ajuste de mensagem para a LP: **arquitetura de software orientada a IA** (o conceito de IA fica aberto; nenhum fornecedor de modelo entra na copy) e senioridade enterprise (energia, educação, fintech). Os produtos próprios entram como prova de entrega, não como a oferta da página.
+> Baseado no posicionamento definido em `CV_Rafael_Coelho_v2.md`, com um ajuste de mensagem para a LP: **arquitetura de software orientada a IA** (o conceito de IA fica aberto; nenhum fornecedor de modelo entra na copy) e experiência em energia, educação e fintech. Os produtos próprios entram como prova de entrega, não como a oferta da página.
 
 ## Índice
 
@@ -32,7 +32,7 @@ Princípio norteador: **uma LP de tráfego pago converte quando é rápida, foca
 | Modelo de precificação | Sem tabela pública — "sob consulta" via formulário, com pergunta de qualificação de orçamento no form | ✅ |
 | Público-alvo prioritário | Não restringir no anúncio/segmentação; prova social ancorada nos setores reais já atendidos (energia, educação, fintech) | ✅ |
 | Regime jurídico | CNPJ ME em processo de abertura | ✅ (aguardando formalização) |
-| Modelo de atuação | Só você — usar como diferencial ("fala direto com quem arquiteta e constrói", sem júnior, sem gerente de conta) | ✅ |
+| Modelo de atuação | Só você — usar como diferencial ("fala direto com quem entende o problema e constrói a solução", sem repasse, sem gerente de conta). Não usar as palavras júnior, sênior ou senioridade. | ✅ |
 | Uso de nomes de clientes | Sem cláusula de confidencialidade — **Neoenergia, Brivia e Auren podem ser citados com nome/logo real** nos cases. | ✅ |
 
 > Como a marca é pessoal (não um nome de estúdio genérico), o CNPJ ME pode operar com nome fantasia "Rafael Coelho — Arquitetura de Software" ou equivalente; não há necessidade de registrar uma segunda marca comercial separada.
@@ -45,9 +45,9 @@ Princípio norteador: **uma LP de tráfego pago converte quando é rápida, foca
 
 1. **Arquitetura de Software** — não entrega só interface, entrega estrutura que escala e não vira dívida técnica.
 2. **Arquitetura orientada a IA** — a IA entra no desenho do sistema e no jeito de construir, para acelerar a entrega sem abrir mão de controle, revisão e qualidade. A copy não cita fornecedor nem modelo: o cliente compra a arquitetura, e a ferramenta de IA pode mudar.
-3. **Senioridade / bagagem enterprise** — já resolveu problemas reais em setores regulados e de alta exigência (energia, educação, fintech), e também tira produto próprio do zero até produção.
+3. **Experiência** — já resolveu problemas reais em setores regulados e de alta exigência (energia, educação, fintech), e também tira produto próprio do zero até produção. Na copy, o nome do pilar é Experiência.
 
-**Diferencial de modelo de atuação (atuação solo):** transformar "é só uma pessoa" em vantagem, não desvantagem — "você fala direto com quem arquiteta e constrói, sem júnior no meio e sem gerente de conta traduzindo o que você pediu." Esse é um argumento forte contra o principal receio do público de software houses tradicionais (equipe trocada, comunicação em camadas).
+**Diferencial de modelo de atuação (atuação solo):** transformar "é só uma pessoa" em vantagem, não desvantagem — "você fala direto com quem entende o problema e constrói a solução, sem repasse no meio e sem gerente de conta traduzindo o que você pediu." Esse é um argumento forte contra o principal receio do público de software houses tradicionais (equipe trocada, comunicação em camadas).
 
 **Oferta de serviço (estrutura de 3 camadas, sem preço público):**
 
@@ -61,9 +61,7 @@ Preço não aparece na LP — a CTA leva a uma conversa, e o formulário inclui 
 
 **Sugestões de headline para o Hero** (validar tom com a marca escolhida):
 
-- "Arquitetura de software sênior, entregue na velocidade da IA."
-- "Software bem arquitetado, sem os prazos de uma software house tradicional."
-- "Da arquitetura ao deploy: engenharia sênior potencializada por IA."
+- "Transforme o que trava na sua operação com inteligência artificial."
 
 **Regra de ouro de copy para tráfego pago:** a headline da LP precisa **espelhar o texto do anúncio** (message match) — decida a headline só depois de esboçar os anúncios do Sprint 8.
 
@@ -107,7 +105,7 @@ Ordem pensada para tráfego pago (funil de convicção, não navegação livre):
 1. **Header minimalista** — logo + 1 CTA (ex: "Falar no WhatsApp"). Sem menu extenso: **cada link de saída é uma fuga de conversão.**
 2. **Hero** — headline + subheadline + CTA principal + faixa de logos dos clientes reais (Neoenergia, Brivia, Auren) logo abaixo, como prova social imediata.
 3. **Dor/Problema** — o que dói no cliente hoje (retrabalho, dívida técnica, prazos, dependência de freelancer sem arquitetura).
-4. **Solução / 3 Pilares** — Arquitetura, IA, Senioridade (cards com 1 frase de prova cada).
+4. **Solução / 3 Pilares** — Arquitetura, IA, Experiência (cards com 1 frase de prova cada).
 5. **Como funciona** — 3-4 passos do processo comercial (diagnóstico → proposta → build → entrega), reduz objeção de "como funciona a contratação".
 6. **Cases/Portfolio** — duas faixas, na mesma estrutura problema → decisão de arquitetura → resultado:
    - **Clientes:** Neoenergia, Brivia e Auren, com nome e logo reais. A faixa de logos fica logo abaixo do Hero.

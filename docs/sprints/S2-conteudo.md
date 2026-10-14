@@ -76,7 +76,7 @@
 
 ## Decisões tomadas
 
-1. **Headline provisória** — "Arquitetura de software sênior, entregue na velocidade da IA." A regra de message match com o anúncio continua valendo na Sprint 8; esta frase destrava a copy agora.
+1. **Headline** — "Transforme o que trava na sua operação com inteligência artificial." A frase anterior, com "sênior", foi substituída. A regra de message match com o anúncio continua valendo na Sprint 8.
 2. **CTA** — o texto de todo botão de ação é "Falar no WhatsApp". A cor continua `#E35D2F`.
 3. **IA sem fornecedor** — a copy não cita Claude, ChatGPT, OpenAI, Anthropic nem Cursor.
 4. **Depoimentos** — a seção existe e fica vazia. Nenhuma frase é inventada.

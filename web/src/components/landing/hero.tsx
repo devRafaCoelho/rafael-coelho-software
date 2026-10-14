@@ -6,11 +6,11 @@ export function Hero() {
   return (
     <section className="mx-auto flex w-full max-w-3xl flex-col gap-6 px-4 py-10">
       <h1 className="font-heading text-4xl text-balance">
-        Arquitetura de software sênior, entregue na velocidade da IA.
+        Transforme o que trava na sua operação com inteligência artificial.
       </h1>
       <p>
-        Você fala direto com quem arquiteta e constrói. Sem júnior no meio e sem
-        gerente de conta traduzindo o pedido.
+        Você fala direto com quem entende o problema e constrói a solução. Sem
+        repasse no meio e sem gerente de conta traduzindo o pedido.
       </p>
       <Button
         type="button"
