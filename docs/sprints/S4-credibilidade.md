@@ -53,7 +53,7 @@
   - **Resultado:** pass. O único link da página é `https://petsampas.com.br/`. O texto dos apps e o de reimplementação do Estoque Inteligente aparecem.
   - **Achados:** —
 
-- [ ] **3. Diferencial de IA**
+- [x] **3. Diferencial de IA**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** a página fala de IA no card, mas não explica o limite: a IA propõe, a estrutura restringe o que pode ser gravado, e uma pessoa confirma.
@@ -68,9 +68,9 @@
     1. Abrir `http://localhost:3000` e rolar até o diferencial de IA.
     2. Confirmar os dois parágrafos.
     3. Confirmar que a página não cita Claude, ChatGPT, OpenAI, Anthropic nem Cursor.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Dois parágrafos do diferencial depois dos produtos próprios.
+  - **Resultado:** pass. Os dois textos aparecem nessa posição. A página não cita fornecedor de modelo.
+  - **Achados:** —
 
 - [ ] **4. Sobre com a foto real**
   - **Jira:** n/a
