@@ -91,7 +91,7 @@
   - **Resultado:** pass. A foto tem alt "Rafael Coelho" e carregou. Em 375px ela mede 192px e termina em 208px, sem scroll horizontal.
   - **Achados:** —
 
-- [ ] **5. Depoimentos vazios**
+- [x] **5. Depoimentos vazios**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** a prova social de fala de cliente não existe, e inventar uma frase quebraria a confiança da página.
@@ -106,9 +106,9 @@
     1. Abrir `http://localhost:3000` e rolar até Depoimentos.
     2. Confirmar a frase de seção vazia.
     3. Confirmar que não há outra frase atribuída a uma pessoa.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Seção depois de Sobre só com a frase de depoimento vazio.
+  - **Resultado:** pass. A frase "Nenhum depoimento publicado. A seção fica pronta para receber depois." aparece depois da bio. Não há citação atribuída.
+  - **Achados:** —
 
 - [ ] **6. FAQ das objeções de contratação**
   - **Jira:** n/a
