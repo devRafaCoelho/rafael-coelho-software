@@ -1,3 +1,4 @@
+import { About } from "@/components/landing/about";
 import { AiDifference } from "@/components/landing/ai";
 import { Cases } from "@/components/landing/cases";
 import { Header } from "@/components/landing/header";
@@ -26,6 +27,9 @@ export default function Home() {
       </Reveal>
       <Reveal>
         <AiDifference />
+      </Reveal>
+      <Reveal>
+        <About />
       </Reveal>
     </main>
   );
