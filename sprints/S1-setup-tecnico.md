@@ -53,7 +53,7 @@
   - **Resultado:** pass. `npm run lint` terminou sem erro. No browser, `http://localhost:3000/` mostra o botão "Botão" e o bloco "Bloco com motion".
   - **Achados:** a primeira chamada do `shadcn init` parou num prompt interativo e não gravou arquivos. A segunda, com `--defaults` e `--base radix`, concluiu.
 
-- [ ] **3. Tokens e página-espécime**
+- [x] **3. Tokens e página-espécime**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** cores e fontes ainda são as do template, não as da marca.
@@ -68,9 +68,9 @@
     1. Abrir `http://localhost:3000` no desktop e conferir as quatro amostras, o título, o texto e o botão CTA.
     2. Repetir a leitura com largura de 375px.
     3. Confirmar que o botão de ação está na cor `#E35D2F`.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Tokens da marca em `globals.css` (`@theme`) e fontes Newsreader / Source Sans 3 no layout. A home é a página-espécime com quatro amostras, título, texto, botão CTA e card.
+  - **Resultado:** pass. No desktop (1347px) e em 375px o browser mostrou Papel `rgb(244, 241, 234)`, Tinta `rgb(20, 24, 31)`, Primária `rgb(22, 58, 69)` e o botão CTA `rgb(227, 93, 47)` (`#E35D2F`). Título em Newsreader, texto em Source Sans 3.
+  - **Achados:** com `@theme inline` apontando para `var(--token)`, o Tailwind v4 não emitia os hex de `:root` e o CTA ficava transparente. As cores da marca foram gravadas direto no `@theme`.
 
 - [ ] **4. Preview na Vercel**
   - **Jira:** n/a
