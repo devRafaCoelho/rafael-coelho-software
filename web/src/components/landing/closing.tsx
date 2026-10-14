@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { LeadForm } from "@/components/landing/lead-form";
-import { whatsappUrl } from "@/lib/lead";
+import { WhatsAppLink } from "@/components/landing/whatsapp-link";
 
 export function Closing() {
   return (
@@ -9,14 +8,10 @@ export function Closing() {
         Transforme o que trava na sua operação com inteligência artificial.
       </h2>
       <LeadForm />
-      <Button
-        asChild
+      <WhatsAppLink
+        local="fechamento"
         className="w-fit bg-cta text-cta-foreground hover:bg-cta/90"
-      >
-        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-          Falar no WhatsApp
-        </a>
-      </Button>
+      />
     </section>
   );
 }

@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { whatsappUrl } from "@/lib/lead";
+import { WhatsAppLink } from "@/components/landing/whatsapp-link";
 
 export default function ObrigadoPage() {
   return (
@@ -8,14 +7,10 @@ export default function ObrigadoPage() {
         Pedido recebido. Vou responder em seguida.
       </h1>
       <p>Se preferir, a conversa já pode começar no WhatsApp.</p>
-      <Button
-        asChild
+      <WhatsAppLink
+        local="obrigado"
         className="w-fit bg-cta text-cta-foreground hover:bg-cta/90"
-      >
-        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-          Falar no WhatsApp
-        </a>
-      </Button>
+      />
     </main>
   );
 }

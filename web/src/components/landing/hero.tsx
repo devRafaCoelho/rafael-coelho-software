@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { whatsappUrl } from "@/lib/lead";
+import { WhatsAppLink } from "@/components/landing/whatsapp-link";
 
 const CLIENTS = ["Neoenergia", "Brivia", "Auren"];
 
@@ -13,14 +12,10 @@ export function Hero() {
         Você fala direto com quem entende o problema e constrói a solução. Sem
         repasse no meio e sem gerente de conta traduzindo o pedido.
       </p>
-      <Button
-        asChild
+      <WhatsAppLink
+        local="hero"
         className="w-fit bg-cta text-cta-foreground hover:bg-cta/90"
-      >
-        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-          Falar no WhatsApp
-        </a>
-      </Button>
+      />
       <ul className="grid grid-cols-3 gap-3">
         {CLIENTS.map((name) => (
           <li

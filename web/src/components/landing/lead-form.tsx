@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
+import { track } from "@/lib/analytics";
 import { budgetBands, leadSchema, type Lead } from "@/lib/lead";
 
 const fieldClass = "h-10 border border-foreground/20 bg-background px-2";
@@ -47,6 +48,7 @@ export function LeadForm() {
           );
           return;
         }
+        track({ event: "generate_lead" });
         router.push("/obrigado");
       })}
     >

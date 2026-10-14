@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Newsreader, Source_Sans_3 } from "next/font/google";
+import { GoogleTagManager } from "@/components/analytics/google-tag-manager";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -24,7 +25,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       className={`${newsreader.variable} ${sourceSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <GoogleTagManager />
+        {children}
+      </body>
     </html>
   );
 }
