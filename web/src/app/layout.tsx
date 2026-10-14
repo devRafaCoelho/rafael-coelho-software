@@ -13,8 +13,9 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Design system",
-  description: "Página-espécime do design system.",
+  title: "Rafael Coelho — Arquitetura de Software",
+  description:
+    "Você fala direto com quem arquiteta e constrói. Sem júnior no meio e sem gerente de conta traduzindo o pedido.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
