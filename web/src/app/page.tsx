@@ -1,7 +1,9 @@
 import { About } from "@/components/landing/about";
 import { AiDifference } from "@/components/landing/ai";
 import { Cases } from "@/components/landing/cases";
+import { Closing } from "@/components/landing/closing";
 import { Faq } from "@/components/landing/faq";
+import { Footer } from "@/components/landing/footer";
 import { Header } from "@/components/landing/header";
 import { Hero } from "@/components/landing/hero";
 import { Pain } from "@/components/landing/pain";
@@ -39,6 +41,10 @@ export default function Home() {
       <Reveal>
         <Faq />
       </Reveal>
+      <Reveal>
+        <Closing />
+      </Reveal>
+      <Footer />
     </main>
   );
 }
