@@ -3,7 +3,7 @@
 **Projeto:** LP Rafael Coelho — Arquitetura de Software  
 **Fonte:** `LP_SoftwareHouse_Documentacao.md` (Sprint 2, seções 2, 2.1, 3.3, 3.4 e 3.7) e `CV_Rafael_Coelho_v2.md`  
 **Ambiente de teste:** `http://localhost:3000/wireframe` (app em `web/`). O teste da copy roda com `node --test` em `docs/s2/`.  
-**Status geral:** em execução
+**Status geral:** concluído
 
 ## Índice
 
@@ -53,7 +53,7 @@
   - **Resultado:** pass. No desktop (1347px) e em 375px há 12 seções na ordem da copy, a headline provisória e o botão "Falar no WhatsApp" em `rgb(227, 93, 47)`.
   - **Achados:** a copy gravada com CRLF não separava os blocos; o wireframe passou a aceitar as duas quebras de linha.
 
-- [ ] **3. Foto, logo e favicon no wireframe**
+- [x] **3. Foto, logo e favicon no wireframe**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** o wireframe ainda não mostra quem é a pessoa nem a marca. A foto e o logo já existem na raiz e não entraram na página.
@@ -68,9 +68,9 @@
     1. Abrir `http://localhost:3000/wireframe`.
     2. Confirmar o logo no header e a foto na seção Sobre.
     3. Confirmar que o favicon da aba não é o ícone padrão do Next.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** `web/public/logo.png` no header, `web/public/sobre.png` na seção Sobre e `web/src/app/icon.png` no lugar do favicon padrão.
+  - **Resultado:** pass. Em 375px o header mostra o logo, a seção Sobre mostra a foto e o link do ícone da aba aponta para `icon.png`.
+  - **Achados:** `rafael-coelho-logo.png` é um retrato recortado, não um wordmark. O favicon é um recorte quadrado de 64px da foto de Sobre.
 
 ---
 
