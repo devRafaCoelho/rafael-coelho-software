@@ -53,7 +53,7 @@
   - **Resultado:** pass. No desktop (1347px) o botão está em `rgb(227, 93, 47)`, o logo tem alt "Rafael Coelho" e o header não tem links. Em 375px logo e botão ficam na mesma linha, sem scroll horizontal.
   - **Achados:** —
 
-- [ ] **3. Hero com headline, CTA e faixa de clientes**
+- [x] **3. Hero com headline, CTA e faixa de clientes**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** a primeira dobra ainda não comunica a oferta nem a prova social imediata.
@@ -68,9 +68,9 @@
     1. Abrir `http://localhost:3000`.
     2. Confirmar a `h1`, a subheadline e os três nomes.
     3. Em 375px, confirmar que a headline quebra dentro da largura e que a página não ganha scroll horizontal.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Hero com a headline provisória, a subheadline, o segundo CTA e os três nomes em retângulos.
+  - **Resultado:** pass. A `h1`, a subheadline e Neoenergia, Brivia e Auren (borda de 1px) aparecem. Em 375px a headline termina em 359px e não há scroll horizontal.
+  - **Achados:** —
 
 - [ ] **4. Seção Dor**
   - **Jira:** n/a
