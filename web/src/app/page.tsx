@@ -6,6 +6,7 @@ import { Hero } from "@/components/landing/hero";
 import { Pain } from "@/components/landing/pain";
 import { Pillars } from "@/components/landing/pillars";
 import { Process } from "@/components/landing/process";
+import { Testimonials } from "@/components/landing/testimonials";
 import { Reveal } from "@/components/landing/reveal";
 
 export default function Home() {
@@ -30,6 +31,9 @@ export default function Home() {
       </Reveal>
       <Reveal>
         <About />
+      </Reveal>
+      <Reveal>
+        <Testimonials />
       </Reveal>
     </main>
   );
