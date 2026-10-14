@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Newsreader, Source_Sans_3 } from "next/font/google";
 import { GoogleTagManager } from "@/components/analytics/google-tag-manager";
+import {
+  professionalServiceJsonLd,
+  siteDescription,
+  siteName,
+  siteUrl,
+} from "@/lib/site";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -14,9 +20,16 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Rafael Coelho — Arquitetura de Software",
-  description:
-    "Você fala direto com quem entende o problema e constrói a solução. Sem repasse no meio e sem gerente de conta traduzindo o pedido.",
+  metadataBase: new URL(siteUrl()),
+  title: siteName,
+  description: siteDescription,
+  openGraph: {
+    title: siteName,
+    description: siteDescription,
+    locale: "pt_BR",
+    type: "website",
+    url: siteUrl(),
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -27,6 +40,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <GoogleTagManager />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(professionalServiceJsonLd()),
+          }}
+        />
         {children}
       </body>
     </html>
