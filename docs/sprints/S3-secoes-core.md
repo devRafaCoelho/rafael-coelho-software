@@ -110,7 +110,7 @@
   - **Resultado:** pass. Os três textos aparecem. No desktop os cards ficam lado a lado. Em 375px o segundo começa abaixo do primeiro.
   - **Achados:** —
 
-- [ ] **6. Como funciona em quatro passos**
+- [x] **6. Como funciona em quatro passos**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** o visitante ainda não vê como a contratação anda, que é a objeção que esta seção existe para reduzir.
@@ -125,9 +125,9 @@
     1. Abrir `http://localhost:3000` e rolar até o fim do que já existe.
     2. Confirmar os quatro passos na ordem Diagnóstico, Proposta, Build, Entrega.
     3. Em 375px, confirmar que não há scroll horizontal.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Lista ordenada com Diagnóstico, Proposta, Build e Entrega depois dos pilares.
+  - **Resultado:** pass. Os quatro textos aparecem nessa ordem, com numeração decimal. Em 375px não há scroll horizontal.
+  - **Achados:** —
 
 - [ ] **7. Entrada leve por scroll**
   - **Jira:** n/a
