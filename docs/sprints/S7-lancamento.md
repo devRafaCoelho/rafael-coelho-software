@@ -53,7 +53,7 @@
   - **Resultado:** pass mock — 3 testes; headline e os dois status passam; palavras proibidas e "link reservado" não aparecem nos componentes
   - **Achados:** —
 
-- [~] **3. Leitura no desktop e no celular**
+- [x] **3. Leitura no desktop e no celular**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** a página precisa caber no celular e o funil precisa continuar clicável antes de ir a público. Não há iPhone nem Android físico neste ambiente.
@@ -68,9 +68,9 @@
     1. Abrir `http://localhost:3000` no desktop. Confirmar que `scrollWidth` não passa de `clientWidth`, que o WhatsApp do header está visível, que Preço abre "Não há tabela pública." e que Enviar está desabilitado.
     2. Repetir no viewport 375×812.
     3. Se algo quebrar, corrigir e repetir só o viewport que falhou.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** leitura da home no desktop e em 375×812, sem mudança de layout
+  - **Resultado:** pass browser — nos dois viewports `scrollWidth` igual a `clientWidth` (1332 e 375), o WhatsApp do header visível (no celular a borda direita fica em 359), Preço abre "Não há tabela pública." e Enviar começa desabilitado
+  - **Achados:** iPhone e Android físicos não foram testados
 
 - [ ] **4. Produção na URL da Vercel**
   - **Jira:** n/a
