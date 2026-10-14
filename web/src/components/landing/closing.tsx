@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { LeadForm } from "@/components/landing/lead-form";
+import { whatsappUrl } from "@/lib/lead";
 
 export function Closing() {
   return (
@@ -9,10 +10,12 @@ export function Closing() {
       </h2>
       <LeadForm />
       <Button
-        type="button"
+        asChild
         className="w-fit bg-cta text-cta-foreground hover:bg-cta/90"
       >
-        Falar no WhatsApp
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+          Falar no WhatsApp
+        </a>
       </Button>
     </section>
   );
