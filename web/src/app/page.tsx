@@ -1,3 +1,4 @@
+import { Cases } from "@/components/landing/cases";
 import { Header } from "@/components/landing/header";
 import { Hero } from "@/components/landing/hero";
 import { Pain } from "@/components/landing/pain";
@@ -18,6 +19,9 @@ export default function Home() {
       </Reveal>
       <Reveal>
         <Process />
+      </Reveal>
+      <Reveal>
+        <Cases />
       </Reveal>
     </main>
   );
