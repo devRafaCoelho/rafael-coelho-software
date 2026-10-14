@@ -2,8 +2,8 @@
 
 **Projeto:** LP Rafael Coelho — Arquitetura de Software  
 **Fonte:** `LP_SoftwareHouse_Documentacao.md` (Sprint 1)  
-**Ambiente de teste:** `http://localhost:3000` (app em `web/`). URL de preview da Vercel entra no card 4 na execução.  
-**Status geral:** em execução
+**Ambiente de teste:** `http://localhost:3000` (app em `web/`). Preview: `https://web-chi-pied-78.vercel.app`  
+**Status geral:** concluído
 
 ## Índice
 
@@ -72,7 +72,7 @@
   - **Resultado:** pass. No desktop (1347px) e em 375px o browser mostrou Papel `rgb(244, 241, 234)`, Tinta `rgb(20, 24, 31)`, Primária `rgb(22, 58, 69)` e o botão CTA `rgb(227, 93, 47)` (`#E35D2F`). Título em Newsreader, texto em Source Sans 3.
   - **Achados:** com `@theme inline` apontando para `var(--token)`, o Tailwind v4 não emitia os hex de `:root` e o CTA ficava transparente. As cores da marca foram gravadas direto no `@theme`.
 
-- [ ] **4. Preview na Vercel**
+- [x] **4. Preview na Vercel**
   - **Jira:** n/a
   - **Camada:** full-stack
   - **Problema:** o app só existe na máquina local.
@@ -87,9 +87,9 @@
     1. Publicar com o Vercel CLI a partir de `web/`.
     2. Abrir a URL de preview no browser.
     3. Confirmar amostras, botão CTA e card. Se o CLI não estiver autenticado, marcar `[!]` e registrar o que falta.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Deploy pelo Vercel CLI a partir de `web/`, sem domínio customizado. Projeto `rafaels-projects-f9ecaf31/web`.
+  - **Resultado:** pass. `https://web-chi-pied-78.vercel.app` abriu a página-espécime. Botão CTA `rgb(227, 93, 47)`, Primária `rgb(22, 58, 69)`, Papel `rgb(244, 241, 234)`, título em Newsreader.
+  - **Achados:** o CLI estava deslogado e o login concluiu no fluxo do deploy. O primeiro deploy foi para production porque o projeto ainda não existia. A URL de deployment tem proteção de autenticação da Vercel; o alias público acima abriu sem login.
 
 ---
 
