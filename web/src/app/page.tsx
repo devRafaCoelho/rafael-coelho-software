@@ -1,3 +1,4 @@
+import { ScrollDepth } from "@/components/analytics/scroll-depth";
 import { About } from "@/components/landing/about";
 import { AiDifference } from "@/components/landing/ai";
 import { Cases } from "@/components/landing/cases";
@@ -45,6 +46,7 @@ export default function Home() {
         <Closing />
       </Reveal>
       <Footer />
+      <ScrollDepth />
     </main>
   );
 }

@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { whatsappUrl } from "@/lib/lead";
+import { WhatsAppLink } from "@/components/landing/whatsapp-link";
 
 export function Header() {
   return (
@@ -30,14 +29,10 @@ export function Header() {
             Rafael Coelho
           </span>
         </div>
-        <Button
-          asChild
+        <WhatsAppLink
+          local="header"
           className="shrink-0 bg-cta text-cta-foreground hover:bg-cta/90"
-        >
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-            Falar no WhatsApp
-          </a>
-        </Button>
+        />
       </div>
     </header>
   );

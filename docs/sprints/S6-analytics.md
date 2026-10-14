@@ -34,7 +34,7 @@
   - **Resultado:** pass mock — 3 testes; `GTM-ABC123` passa; vazio, minúsculo e `GTM-abc` falham; scroll 0,5 / 0,8 / 1 devolve as marcas certas
   - **Achados:** —
 
-- [ ] **2. GTM e eventos na página**
+- [x] **2. GTM e eventos na página**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** o clique no WhatsApp, o envio do formulário e a profundidade da leitura não deixam rastro. GA4 e Pixel ainda não podem ser colados no código porque não existe container.
@@ -50,9 +50,9 @@
     2. Clicar em "Falar no WhatsApp" no hero e ler `window.dataLayer`: existe um item `whatsapp_click` com `local` `hero`.
     3. Preencher o formulário com dados válidos, marcar o consentimento, enviar e confirmar a URL `/obrigado` com um item `generate_lead` no `dataLayer`.
     4. Voltar à home, rolar até o fim e confirmar um item `scroll_depth` com `percent` 100.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** GTM condicional, `WhatsAppLink` nos quatro convites, `generate_lead` no POST 200 e `ScrollDepth` na home
+  - **Resultado:** pass browser — sem `googletagmanager.com` no HTML; clique do hero gravou `whatsapp_click` com `local` `hero`; o fim da página gravou `scroll_depth` 100; o envio chegou em `/obrigado` com `generate_lead` sem campos extras
+  - **Achados:** —
 
 - [ ] **3. SEO técnico**
   - **Jira:** n/a
