@@ -95,6 +95,9 @@ export function LeadForm() {
         <input type="checkbox" className="mt-1" {...register("consent")} />
         Concordo em ser contatado sobre este pedido.
       </label>
+      <a href="/privacidade" className="text-sm underline">
+        Política de privacidade
+      </a>
       {sendError ? (
         <p className="text-sm text-destructive">{sendError}</p>
       ) : null}

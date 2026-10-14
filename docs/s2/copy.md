@@ -149,4 +149,4 @@ Contato pelo WhatsApp.
 
 LinkedIn: https://www.linkedin.com/in/rafael-coelho-63b75010b/
 
-Política de privacidade: link reservado para quando o texto existir.
+Política de privacidade: /privacidade

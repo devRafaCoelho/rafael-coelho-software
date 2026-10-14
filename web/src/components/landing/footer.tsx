@@ -8,7 +8,9 @@ export function Footer() {
       >
         LinkedIn
       </a>
-      <p>Política de privacidade: link reservado para quando o texto existir.</p>
+      <a href="/privacidade" className="underline">
+        Política de privacidade
+      </a>
     </footer>
   );
 }
