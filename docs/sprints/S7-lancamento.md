@@ -34,7 +34,7 @@
   - **Resultado:** pass browser — a página cobre coleta, "Não vendo esses dados." e exclusão pelo WhatsApp; o rodapé abriu `/privacidade`; Enviar começa desabilitado e o formulário também tem o link
   - **Achados:** o overlay de hidratação do browser continua apontando `data-cursor-ref`, agora em `pain.tsx`
 
-- [ ] **2. A página publicada segue a copy**
+- [x] **2. A página publicada segue a copy**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** a copy em `docs/s2/copy.md` já foi revisada, mas o texto que o visitante lê está nos componentes. Uma frase proibida pode ter ficado só na tela.
@@ -49,11 +49,11 @@
     1. Rodar `node --experimental-strip-types --test src/lib/public-copy.test.ts` em `web/`.
     2. Confirmar que a headline e os dois status de produto passam.
     3. Confirmar que o teste barra as palavras proibidas e a frase "link reservado".
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** guarda em `web/src/lib/public-copy.test.ts`
+  - **Resultado:** pass mock — 3 testes; headline e os dois status passam; palavras proibidas e "link reservado" não aparecem nos componentes
+  - **Achados:** —
 
-- [ ] **3. Leitura no desktop e no celular**
+- [~] **3. Leitura no desktop e no celular**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** a página precisa caber no celular e o funil precisa continuar clicável antes de ir a público. Não há iPhone nem Android físico neste ambiente.
