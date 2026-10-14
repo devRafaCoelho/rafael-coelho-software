@@ -91,7 +91,7 @@
   - **Resultado:** pass. O parágrafo e os três itens aparecem depois da faixa de clientes. Em 375px a seção ocupa a largura da tela e não há scroll horizontal.
   - **Achados:** —
 
-- [ ] **5. Três pilares em cards**
+- [x] **5. Três pilares em cards**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** Arquitetura, IA e Senioridade ainda não aparecem como a oferta, só como frase no documento de copy.
@@ -106,9 +106,9 @@
     1. Abrir `http://localhost:3000` e localizar os três títulos.
     2. Confirmar o texto de cada card.
     3. Em 375px, confirmar que um card não fica ao lado de outro.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Três cards com Arquitetura, IA e Senioridade e o texto da copy.
+  - **Resultado:** pass. Os três textos aparecem. No desktop os cards ficam lado a lado. Em 375px o segundo começa abaixo do primeiro.
+  - **Achados:** —
 
 - [ ] **6. Como funciona em quatro passos**
   - **Jira:** n/a
