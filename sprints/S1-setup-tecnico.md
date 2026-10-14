@@ -15,7 +15,7 @@
 
 Âncora: `web/` (ainda inexistente). Documentos da raiz permanecem fora do app.
 
-- [~] **1. App Next.js no ar em local**
+- [x] **1. App Next.js no ar em local**
   - **Jira:** n/a
   - **Camada:** front
   - **Problema:** a pasta do projeto só tem documentos e imagens. Não existe git nem aplicação.
@@ -30,9 +30,9 @@
     1. Em `web/`, instalar dependências e rodar `npm run build`.
     2. Subir o dev server e abrir `http://localhost:3000`.
     3. Confirmar que a página do Next responde no browser.
-  - **Done:** *(execução)*
-  - **Resultado:** *(pass/fail mock ou o que foi visto no browser)*
-  - **Achados:** *(— | …)*
+  - **Done:** Git na raiz (`main` → `s1-setup-tecnico` → `s1-01-scaffold`). Next.js 16.4.1 em `web/` com App Router, TypeScript, Tailwind, ESLint, `src/` e alias `@/*`. `create-next-app` rodou com `--disable-git` para não criar um repositório dentro de `web/`.
+  - **Resultado:** pass. `npm run build` concluiu sem erro. No browser, `http://localhost:3000/` abriu com título "Create Next App" e o texto "To get started, edit the page.tsx file."
+  - **Achados:** o dev server avisa que o Turbopack ignorou um `package-lock.json` em `c:\Users\rafac` (fora deste repo) e sugere `turbopack.root`. O build e a página passaram mesmo assim.
 
 - [ ] **2. shadcn, Prettier e Framer Motion**
   - **Jira:** n/a
