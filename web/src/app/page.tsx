@@ -3,15 +3,22 @@ import { Hero } from "@/components/landing/hero";
 import { Pain } from "@/components/landing/pain";
 import { Pillars } from "@/components/landing/pillars";
 import { Process } from "@/components/landing/process";
+import { Reveal } from "@/components/landing/reveal";
 
 export default function Home() {
   return (
     <main className="pt-24">
       <Header />
       <Hero />
-      <Pain />
-      <Pillars />
-      <Process />
+      <Reveal>
+        <Pain />
+      </Reveal>
+      <Reveal>
+        <Pillars />
+      </Reveal>
+      <Reveal>
+        <Process />
+      </Reveal>
     </main>
   );
 }
