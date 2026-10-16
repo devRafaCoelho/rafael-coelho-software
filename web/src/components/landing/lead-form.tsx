@@ -3,16 +3,19 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
+import { BudgetSelect } from "@/components/landing/budget-select";
 import { Button } from "@/components/ui/button";
 import { track } from "@/lib/analytics";
-import { budgetBands, leadSchema, type Lead } from "@/lib/lead";
+import { formatWhatsapp, leadSchema, type Lead } from "@/lib/lead";
 
-const fieldClass = "h-10 border border-foreground/20 bg-background px-2";
+const fieldClass =
+  "h-11 w-full rounded-xl border border-foreground/12 bg-background px-3 text-base outline-none transition-colors focus:border-graphite";
 
 export function LeadForm() {
   const {
     register,
+    control,
     handleSubmit,
     watch,
     formState: { errors },
@@ -30,10 +33,11 @@ export function LeadForm() {
   const consent = watch("consent");
   const router = useRouter();
   const [sendError, setSendError] = useState<string | null>(null);
+  const { onChange: onWhatsappChange, ...whatsappField } = register("whatsapp");
 
   return (
     <form
-      className="flex flex-col gap-3"
+      className="grid gap-4 sm:grid-cols-2"
       noValidate
       onSubmit={handleSubmit(async (values) => {
         setSendError(null);
@@ -69,42 +73,58 @@ export function LeadForm() {
       </label>
       <label className="flex flex-col gap-1 text-sm">
         WhatsApp
-        <input className={fieldClass} {...register("whatsapp")} />
+        <input
+          className={fieldClass}
+          type="tel"
+          inputMode="tel"
+          autoComplete="tel"
+          placeholder="(71) 99999-9999"
+          {...whatsappField}
+          onChange={(event) => {
+            event.target.value = formatWhatsapp(event.target.value);
+            void onWhatsappChange(event);
+          }}
+        />
       </label>
-      <label className="flex flex-col gap-1 text-sm">
+      <label className="flex flex-col gap-1 text-sm sm:col-span-2">
         Mensagem
         <textarea
-          className="min-h-24 border border-foreground/20 bg-background px-2 py-2"
+          className="min-h-28 w-full rounded-xl border border-foreground/12 bg-background px-3 py-2 text-base outline-none transition-colors focus:border-graphite"
           {...register("message")}
         />
       </label>
-      <label className="flex flex-col gap-1 text-sm">
-        Faixa de orçamento
-        <select className={fieldClass} defaultValue="" {...register("budget")}>
-          <option value="" disabled>
-            Faixa de orçamento
-          </option>
-          {budgetBands.map((band) => (
-            <option key={band} value={band}>
-              {band}
-            </option>
-          ))}
-        </select>
-      </label>
-      <label className="flex items-start gap-2 text-sm">
-        <input type="checkbox" className="mt-1" {...register("consent")} />
+      <div className="flex flex-col gap-1 text-sm sm:col-span-2">
+        <span>Faixa de orçamento</span>
+        <Controller
+          name="budget"
+          control={control}
+          render={({ field }) => (
+            <BudgetSelect
+              name={field.name}
+              value={field.value}
+              onChange={field.onChange}
+              onBlur={field.onBlur}
+            />
+          )}
+        />
+      </div>
+      <label className="flex items-start gap-2 text-sm sm:col-span-2">
+        <input type="checkbox" className="mt-1 size-4" {...register("consent")} />
         Concordo em ser contatado sobre este pedido.
       </label>
-      <a href="/privacidade" className="text-sm underline">
+      <a
+        href="/privacidade"
+        className="text-sm underline underline-offset-4 sm:col-span-2"
+      >
         Política de privacidade
       </a>
       {sendError ? (
-        <p className="text-sm text-destructive">{sendError}</p>
+        <p className="text-sm text-destructive sm:col-span-2">{sendError}</p>
       ) : null}
       <Button
         type="submit"
         disabled={!consent}
-        className="w-fit bg-cta text-cta-foreground hover:bg-cta/90"
+        className="h-12 w-fit bg-cta px-5 text-base text-cta-foreground hover:bg-cta/90 sm:col-span-2"
       >
         Enviar
       </Button>

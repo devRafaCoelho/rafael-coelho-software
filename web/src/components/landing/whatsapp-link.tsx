@@ -9,10 +9,13 @@ export function WhatsAppLink({
   className,
 }: {
   local: WhatsAppLocal;
-  className: string;
+  className?: string;
 }) {
   return (
-    <Button asChild className={className}>
+    <Button
+      asChild
+      className={`rounded-xl bg-cta text-cta-foreground hover:bg-cta/90 ${className ?? ""}`}
+    >
       <a
         href={whatsappUrl}
         target="_blank"

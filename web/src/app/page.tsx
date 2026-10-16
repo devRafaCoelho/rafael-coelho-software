@@ -1,46 +1,38 @@
 import { ScrollDepth } from "@/components/analytics/scroll-depth";
 import { About } from "@/components/landing/about";
-import { AiDifference } from "@/components/landing/ai";
-import { Cases } from "@/components/landing/cases";
 import { Closing } from "@/components/landing/closing";
-import { Faq } from "@/components/landing/faq";
+import { Differentials } from "@/components/landing/differentials";
 import { Footer } from "@/components/landing/footer";
 import { Header } from "@/components/landing/header";
+import { Help } from "@/components/landing/help";
 import { Hero } from "@/components/landing/hero";
-import { Pain } from "@/components/landing/pain";
-import { Pillars } from "@/components/landing/pillars";
-import { Process } from "@/components/landing/process";
-import { Testimonials } from "@/components/landing/testimonials";
 import { Reveal } from "@/components/landing/reveal";
+import { Services } from "@/components/landing/services";
+import { Stack } from "@/components/landing/stack";
+import { UseCases } from "@/components/landing/use-cases";
 
 export default function Home() {
   return (
-    <main className="pt-20">
+    <main>
       <Header />
       <Hero />
       <Reveal>
-        <Pain />
+        <Services />
       </Reveal>
       <Reveal>
-        <Pillars />
+        <Help />
       </Reveal>
       <Reveal>
-        <Process />
+        <UseCases />
       </Reveal>
       <Reveal>
-        <Cases />
-      </Reveal>
-      <Reveal>
-        <AiDifference />
+        <Stack />
       </Reveal>
       <Reveal>
         <About />
       </Reveal>
       <Reveal>
-        <Testimonials />
-      </Reveal>
-      <Reveal>
-        <Faq />
+        <Differentials />
       </Reveal>
       <Reveal>
         <Closing />

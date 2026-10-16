@@ -11,33 +11,33 @@ export default function PrivacidadePage() {
   return (
     <>
       <Header />
-      <main className="mx-auto flex w-full max-w-3xl flex-col gap-4 px-4 pt-24 pb-10">
-        <h1 className="font-heading text-3xl text-balance">
+      <main className="mx-auto flex w-full max-w-3xl flex-col gap-5 px-5 pt-28 pb-20 md:px-8">
+        <h1 className="text-4xl leading-tight font-semibold text-balance">
           Política de privacidade
         </h1>
-        <p>
+        <p className="text-lg leading-relaxed text-foreground/75">
           O formulário deste site coleta nome, empresa, e-mail, WhatsApp,
           mensagem e faixa de orçamento, além do registro de que você concordou
           em ser contatado.
         </p>
-        <p>
+        <p className="text-lg leading-relaxed text-foreground/75">
           Eu uso esses dados para responder o seu pedido. Não vendo esses
           dados.
         </p>
-        <p>
+        <p className="text-lg leading-relaxed text-foreground/75">
           O botão Falar no WhatsApp abre uma conversa fora deste site, no
           WhatsApp, com uma mensagem pronta.
         </p>
-        <p>
+        <p className="text-lg leading-relaxed text-foreground/75">
           Se a medição do site estiver ligada, ela registra o clique no
           WhatsApp, o envio do formulário e a profundidade da leitura. Esses
           eventos não levam nome, e-mail nem telefone.
         </p>
-        <p>
+        <p className="text-lg leading-relaxed text-foreground/75">
           Para pedir a exclusão desses dados, fale no{" "}
           <a
             href={whatsappUrl}
-            className="underline"
+            className="underline underline-offset-4"
             target="_blank"
             rel="noopener noreferrer"
           >

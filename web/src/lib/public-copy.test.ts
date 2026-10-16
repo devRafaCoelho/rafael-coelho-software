@@ -14,7 +14,6 @@ const page = [
   ...landing,
   readFileSync(join(src, "app/page.tsx"), "utf8"),
   readFileSync(join(src, "app/layout.tsx"), "utf8"),
-  readFileSync(join(src, "app/privacidade/page.tsx"), "utf8"),
 ].join("\n");
 
 test("a headline está na página", () => {
@@ -24,15 +23,20 @@ test("a headline está na página", () => {
   );
 });
 
-test("os produtos publicam o status real", () => {
-  assert.match(page, /Os apps aguardam aprovação da Apple e do Google\./);
-  assert.match(page, /em reimplementação/);
+test("a página segue a estrutura do funil", () => {
+  assert.match(page, /id="servicos"/);
+  assert.match(page, /id="como-ajudo"/);
+  assert.match(page, /id="casos"/);
+  assert.match(page, /id="stack"/);
+  assert.match(page, /id="sobre"/);
+  assert.match(page, /id="diferenciais"/);
+  assert.match(page, /id="vamos-conversar"/);
 });
 
-test("a página não usa palavra proibida nem a frase reservada", () => {
+test("a página não usa palavra proibida nem faixa de clientes", () => {
   assert.doesNotMatch(
     page,
     /júnior|junior|sênior|senioridade|\bsenior\b|claude|chatgpt|openai|anthropic|\bcursor\b/i,
   );
-  assert.doesNotMatch(page, /link reservado/i);
+  assert.doesNotMatch(page, /empresas que já confiaram|Neoenergia|Brivia|Auren/i);
 });

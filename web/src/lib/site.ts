@@ -1,7 +1,7 @@
 export const siteName = "Rafael Coelho — Arquitetura de Software";
 
 export const siteDescription =
-  "Você fala direto com quem entende o problema e constrói a solução. Sem repasse no meio e sem gerente de conta traduzindo o pedido.";
+  "Arquitetura de software orientada a IA. Você fala direto com quem entende o problema e constrói a solução.";
 
 export function siteUrl(): string {
   const configured = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
