@@ -1,4 +1,4 @@
-import { Eyebrow, Section, SectionTitle } from "@/components/landing/section";
+import { Section, SectionHeader } from "@/components/landing/section";
 
 const PAINS = [
   "Cada mudança quebra o que já estava no ar",
@@ -29,20 +29,19 @@ const STEPS = [
 
 export function Help() {
   return (
-    <Section id="como-ajudo" className="bg-muted-surface">
-      <Eyebrow>Como posso ajudar</Eyebrow>
-      <SectionTitle>Do problema ao sistema no ar</SectionTitle>
-      <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/65 md:text-lg">
-        Um processo claro, com entregas incrementais e foco em valor desde o
-        primeiro passo.
-      </p>
+    <Section id="como-ajudo" className="bg-muted-surface/70">
+      <SectionHeader
+        eyebrow="Como posso ajudar"
+        title="Do problema ao sistema no ar"
+        description="Um processo claro, com entregas incrementais e foco em valor desde o primeiro passo."
+      />
 
-      <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
+      <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
         {PAINS.map((pain, index) => (
           <li
             key={pain}
             className={[
-              "flex items-start gap-3 rounded-xl border border-foreground/8 bg-surface px-4 py-3.5 lg:col-span-2",
+              "glass flex items-start gap-3 rounded-xl p-4 lg:col-span-2",
               index === 3 ? "lg:col-start-2" : "",
             ]
               .filter(Boolean)
@@ -52,14 +51,14 @@ export function Help() {
               aria-hidden
               className="mt-1.5 size-2 shrink-0 rounded-full bg-lime"
             />
-            <span className="text-sm leading-snug text-foreground/75">
+            <span className="text-sm leading-snug text-foreground/70">
               {pain}
             </span>
           </li>
         ))}
       </ul>
 
-      <ol className="relative mt-16 max-w-4xl mx-auto">
+      <ol className="relative mx-auto mt-16 max-w-4xl">
         <div
           aria-hidden
           className="absolute top-3 bottom-3 left-[1.125rem] w-px bg-foreground/12 lg:left-1/2 lg:-translate-x-px"
@@ -74,7 +73,7 @@ export function Help() {
             >
               <div
                 aria-hidden
-                className="relative z-10 flex size-9 items-center justify-center rounded-full border-2 border-lime bg-muted-surface text-[11px] font-bold tracking-wide text-graphite lg:absolute lg:left-1/2 lg:-translate-x-1/2"
+                className="relative z-10 flex size-9 items-center justify-center rounded-full border-2 border-lime bg-background text-[11px] font-bold tracking-wide text-graphite lg:absolute lg:left-1/2 lg:-translate-x-1/2"
               >
                 {n}
               </div>
@@ -88,30 +87,23 @@ export function Help() {
               >
                 <div
                   className={[
-                    "rounded-2xl border border-foreground/8 bg-surface p-5 shadow-[var(--shadow-card)] md:p-6",
+                    "glass rounded-2xl p-6 transition-colors hover:border-lime/40",
                     left ? "lg:ml-auto" : "",
                   ]
                     .filter(Boolean)
                     .join(" ")}
                 >
-                  <h3 className="font-display text-xl font-bold tracking-tight">
+                  <span className="mb-2 inline-block text-xs font-bold text-[#5a9209] lg:hidden">
+                    {n}
+                  </span>
+                  <h3 className="font-display mb-2 text-xl font-semibold">
                     {step.title}
                   </h3>
-                  <div
-                    aria-hidden
-                    className={[
-                      "mt-3 h-1 w-10 rounded-full bg-lime",
-                      left ? "lg:ml-auto" : "",
-                    ]
-                      .filter(Boolean)
-                      .join(" ")}
-                  />
-                  <p className="mt-4 text-sm leading-relaxed text-foreground/65 md:text-base">
+                  <p className="text-sm leading-relaxed text-foreground/65">
                     {step.body}
                   </p>
                 </div>
               </div>
-              {/* spacer column on desktop so the empty side keeps rhythm */}
               <div
                 aria-hidden
                 className={[

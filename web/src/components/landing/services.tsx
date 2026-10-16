@@ -6,12 +6,7 @@ import {
   RefreshCw,
   SearchCheck,
 } from "lucide-react";
-import {
-  CardShell,
-  Eyebrow,
-  Section,
-  SectionTitle,
-} from "@/components/landing/section";
+import { CardShell, Section, SectionHeader } from "@/components/landing/section";
 
 const SERVICES = [
   {
@@ -49,28 +44,28 @@ const SERVICES = [
 export function Services() {
   return (
     <Section id="servicos">
-      <Eyebrow>Serviços</Eyebrow>
-      <SectionTitle className="max-w-2xl">Soluções que geram impacto</SectionTitle>
-      <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/65 md:text-lg">
-        Do diagnóstico pontual à evolução contínua — cada entrega é desenhada
-        para o seu contexto.
-      </p>
-      <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <SectionHeader
+        eyebrow="Serviços"
+        title="Soluções que geram impacto"
+        description="Do diagnóstico pontual à evolução contínua — cada entrega é desenhada para o seu contexto."
+      />
+      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((service) => (
           <li key={service.title}>
-            <CardShell className="flex h-full flex-col">
-              <span className="inline-flex size-11 items-center justify-center rounded-xl bg-lime/35 text-graphite">
-                <service.icon className="size-5" aria-hidden />
-              </span>
-              <h3 className="mt-5 text-xl font-semibold">{service.title}</h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-foreground/65 md:text-base">
-                {service.body}
-              </p>
-              <a
-                href="#vamos-conversar"
-                className="mt-5 text-sm font-semibold text-graphite underline-offset-4 hover:underline"
-              >
-                Saiba mais →
+            <CardShell className="group flex h-full flex-col">
+              <a href="#vamos-conversar" className="block flex-1">
+                <span className="mb-4 inline-flex rounded-xl bg-lime/25 p-3 text-graphite transition-colors group-hover:bg-lime/40">
+                  <service.icon className="size-6" aria-hidden />
+                </span>
+                <h3 className="font-display mb-2 text-lg font-semibold">
+                  {service.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-foreground/65">
+                  {service.body}
+                </p>
+                <p className="mt-4 text-sm font-semibold text-[#5a9209] transition-colors group-hover:text-[#3f6b06]">
+                  Saiba mais →
+                </p>
               </a>
             </CardShell>
           </li>

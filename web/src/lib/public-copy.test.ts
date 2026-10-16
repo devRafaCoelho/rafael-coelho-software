@@ -19,7 +19,7 @@ const page = [
 test("a headline está na página", () => {
   assert.match(
     page,
-    /Transforme o que trava na sua operação com inteligência artificial\./,
+    /Transforme o que trava na sua operação com[\s\S]*inteligência artificial/,
   );
 });
 

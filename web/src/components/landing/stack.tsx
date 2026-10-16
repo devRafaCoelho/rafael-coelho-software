@@ -9,12 +9,7 @@ import {
   Smartphone,
   Workflow,
 } from "lucide-react";
-import {
-  CardShell,
-  Eyebrow,
-  Section,
-  SectionTitle,
-} from "@/components/landing/section";
+import { CardShell, Section, SectionHeader } from "@/components/landing/section";
 
 type Category =
   | "Front-end"
@@ -102,37 +97,32 @@ const TOOLS: { name: string; category: Category; body: string }[] = [
 
 export function Stack() {
   return (
-    <Section id="stack" className="bg-muted-surface">
-      <Eyebrow>Stack & Ferramentas</Eyebrow>
-      <SectionTitle>Tecnologia escolhida a dedo</SectionTitle>
-      <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/65 md:text-lg">
-        Cada projeto usa as ferramentas certas para o contexto — sem modismo, com
-        foco em resultado.
-      </p>
-      <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <Section id="stack" className="bg-muted-surface/70">
+      <SectionHeader
+        eyebrow="Stack & Ferramentas"
+        title="Tecnologia escolhida a dedo"
+        description="Cada projeto usa as ferramentas certas para o contexto — sem modismo, com foco em resultado."
+      />
+      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {TOOLS.map((tool) => {
           const Icon = CATEGORY_ICON[tool.category];
           return (
             <li key={tool.name}>
-              <CardShell className="group relative h-full overflow-hidden">
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(182,255,46,0.16),transparent_55%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                />
-                <div className="relative">
-                  <div className="flex items-center gap-2.5">
-                    <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-xl bg-lime/35 text-primary transition-transform duration-300 group-hover:scale-105">
-                      <Icon className="size-4" aria-hidden />
-                    </span>
-                    <p className="text-xs font-semibold tracking-[0.14em] text-primary uppercase">
-                      {tool.category}
+              <CardShell className="group h-full p-5 hover:border-lime/40">
+                <div className="mb-3 flex items-center gap-3">
+                  <span className="inline-flex rounded-lg bg-lime/25 p-2 text-graphite transition-colors group-hover:bg-lime/40">
+                    <Icon className="size-5" aria-hidden />
+                  </span>
+                  <div>
+                    <p className="font-display text-sm font-semibold">
+                      {tool.name}
                     </p>
+                    <p className="text-xs text-[#5a9209]">{tool.category}</p>
                   </div>
-                  <h3 className="mt-4 text-xl font-semibold">{tool.name}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-foreground/65">
-                    {tool.body}
-                  </p>
                 </div>
+                <p className="text-sm leading-relaxed text-foreground/65">
+                  {tool.body}
+                </p>
               </CardShell>
             </li>
           );

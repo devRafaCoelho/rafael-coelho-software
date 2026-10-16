@@ -108,10 +108,38 @@ export function LeadForm() {
           )}
         />
       </div>
-      <label className="flex items-start gap-2 text-sm sm:col-span-2">
-        <input type="checkbox" className="mt-1 size-4" {...register("consent")} />
-        Concordo em ser contatado sobre este pedido.
-      </label>
+      <Controller
+        name="consent"
+        control={control}
+        render={({ field }) => (
+          <label className="flex cursor-pointer items-center gap-2 text-sm sm:col-span-2">
+            <span className="relative inline-flex size-4 shrink-0">
+              <input
+                type="checkbox"
+                className="peer absolute inset-0 z-10 cursor-pointer opacity-0"
+                checked={Boolean(field.value)}
+                onChange={(event) => field.onChange(event.target.checked)}
+                onBlur={field.onBlur}
+                ref={field.ref}
+                name={field.name}
+              />
+              <span
+                aria-hidden
+                className="pointer-events-none flex size-4 items-center justify-center rounded border border-foreground/25 bg-white peer-checked:border-lime peer-checked:bg-lime peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-lime"
+              >
+                <svg
+                  viewBox="0 0 16 16"
+                  className={`size-3.5 text-graphite ${field.value ? "opacity-100" : "opacity-0"}`}
+                  fill="currentColor"
+                >
+                  <path d="M6.5 11.2 3.2 7.9l1.1-1.1 2.2 2.2 5-5.1 1.1 1.1z" />
+                </svg>
+              </span>
+            </span>
+            Concordo em ser contatado sobre este pedido.
+          </label>
+        )}
+      />
       <a
         href="/privacidade"
         className="text-sm underline underline-offset-4 sm:col-span-2"

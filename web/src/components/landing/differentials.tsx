@@ -1,9 +1,4 @@
-import {
-  CardShell,
-  Eyebrow,
-  Section,
-  SectionTitle,
-} from "@/components/landing/section";
+import { Section, SectionHeader } from "@/components/landing/section";
 
 const ITEMS = [
   {
@@ -34,26 +29,32 @@ const ITEMS = [
 
 export function Differentials() {
   return (
-    <Section id="diferenciais" className="bg-muted-surface">
-      <Eyebrow>Diferenciais</Eyebrow>
-      <SectionTitle>Por que trabalhar comigo</SectionTitle>
-      <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/65 md:text-lg">
-        Experiência técnica aliada à visão de negócio — o parceiro certo para
-        projetos que precisam entregar de verdade.
-      </p>
-      <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <Section id="diferenciais" className="bg-muted-surface/70">
+      <SectionHeader
+        eyebrow="Diferenciais"
+        title="Por que trabalhar comigo"
+        description="Experiência técnica aliada à visão de negócio — o parceiro certo para projetos que precisam entregar de verdade."
+      />
+      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {ITEMS.map((item, index) => (
           <li key={item.title}>
-            <CardShell className="h-full">
-              <p className="text-sm font-semibold tracking-[0.14em] text-graphite/35">
-                {String(index + 1).padStart(2, "0")}
-              </p>
-              <div className="mt-3 h-1.5 w-10 rounded-full bg-lime" />
-              <h3 className="mt-5 text-xl font-semibold">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-foreground/65">
-                {item.body}
-              </p>
-            </CardShell>
+            <div className="glass group relative overflow-hidden rounded-2xl p-6 transition-colors hover:border-lime/40">
+              <div
+                aria-hidden
+                className="absolute -top-4 -right-4 size-24 rounded-full bg-lime/15 transition-transform group-hover:scale-150"
+              />
+              <div className="relative">
+                <span className="font-display mb-3 inline-block text-2xl font-bold text-lime/70">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="font-display mb-2 text-lg font-semibold">
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-foreground/65">
+                  {item.body}
+                </p>
+              </div>
+            </div>
           </li>
         ))}
       </ul>

@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Mark } from "@/components/landing/mark";
-import { WhatsAppLink } from "@/components/landing/whatsapp-link";
 
 const LINKS = [
   { href: "#servicos", label: "Serviços" },
@@ -16,53 +15,64 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-30 border-b border-foreground/8 bg-background/90 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 md:px-8">
-        <a href="/" className="flex min-w-0 items-center gap-2.5">
-          <Mark className="size-9 shrink-0 text-graphite" />
-          <span className="text-[15px] leading-none font-semibold tracking-tight">
-            Rafael
-            <br />
-            Coelho
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-foreground/8 bg-background/95 backdrop-blur-md">
+      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="/" className="flex items-center gap-3">
+          <Mark className="size-10 shrink-0 text-graphite" />
+          <span className="font-display hidden text-sm font-bold sm:block">
+            Rafael Coelho
           </span>
         </a>
-        <nav className="hidden items-center gap-6 text-sm font-medium text-foreground/65 xl:flex">
+
+        <ul className="hidden items-center gap-8 md:flex">
           {LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="transition-colors hover:text-foreground"
-            >
-              {link.label}
-            </a>
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className="text-sm text-foreground/55 transition-colors hover:text-foreground"
+              >
+                {link.label}
+              </a>
+            </li>
           ))}
-        </nav>
-        <div className="flex items-center gap-2">
-          <WhatsAppLink
-            local="header"
-            className="hidden h-10 px-3.5 sm:inline-flex"
-          />
+        </ul>
+
+        <div className="hidden md:block">
           <a
             href="#vamos-conversar"
-            className="hidden h-10 items-center rounded-xl bg-graphite px-3.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 md:inline-flex"
+            className="glow-lime inline-flex items-center justify-center rounded-xl border border-lime/50 bg-lime px-4 py-2 text-xs font-semibold text-cta-foreground transition-colors hover:bg-lime/90"
           >
-            Agendar diagnóstico
+            Agendar Diagnóstico
           </a>
-          <button
-            type="button"
-            className="inline-flex h-10 items-center rounded-lg border border-foreground/12 px-3 text-sm font-medium xl:hidden"
-            aria-expanded={open}
-            aria-controls="menu-mobile"
-            onClick={() => setOpen((value) => !value)}
-          >
-            Menu
-          </button>
         </div>
-      </div>
+
+        <button
+          type="button"
+          className="glass relative z-50 flex size-10 items-center justify-center rounded-lg md:hidden"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
+          aria-controls="menu-mobile"
+          onClick={() => setOpen((value) => !value)}
+        >
+          <span className="sr-only">Menu</span>
+          <div className="flex flex-col gap-1.5">
+            <span
+              className={`block h-0.5 w-5 bg-foreground transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}
+            />
+            <span
+              className={`block h-0.5 w-5 bg-foreground transition-opacity ${open ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block h-0.5 w-5 bg-foreground transition-transform ${open ? "-translate-y-2 -rotate-45" : ""}`}
+            />
+          </div>
+        </button>
+      </nav>
+
       {open ? (
-        <nav
+        <div
           id="menu-mobile"
-          className="border-t border-foreground/8 bg-background px-5 py-4 xl:hidden"
+          className="glass mx-4 rounded-2xl p-4 md:hidden"
         >
           <ul className="flex flex-col gap-3 text-sm font-medium">
             {LINKS.map((link) => (
@@ -79,14 +89,14 @@ export function Header() {
             <li>
               <a
                 href="#vamos-conversar"
-                className="block py-1"
+                className="glow-lime mt-1 inline-flex rounded-xl border border-lime/50 bg-lime px-4 py-2 text-xs font-semibold text-cta-foreground"
                 onClick={() => setOpen(false)}
               >
-                Agendar diagnóstico
+                Agendar Diagnóstico
               </a>
             </li>
           </ul>
-        </nav>
+        </div>
       ) : null}
     </header>
   );
