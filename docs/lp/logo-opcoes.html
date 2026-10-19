@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Logo R — variações stencil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --blue: #0b132b;
+    --blue-deep: #070d1f;
+    --blue-light: #15214a;
+    --green: #39ff88;
+    --fg: #e8edf5;
+    --subtle: #8b98b8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--blue);
+    color: var(--fg);
+    font-family: Inter, system-ui, sans-serif;
+  }
+  main { max-width: 1120px; margin: 0 auto; padding: 56px 24px 96px; }
+  .eyebrow {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+  }
+  h1, h2, .wordmark { font-family: "Space Grotesk", system-ui, sans-serif; letter-spacing: -0.025em; }
+  h1 { font-size: 40px; margin: 10px 0 12px; }
+  .intro { color: var(--subtle); max-width: 680px; line-height: 1.6; margin: 0 0 40px; }
+  .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); }
+  @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    border: 1px solid rgba(255,255,255,.08);
+    background: rgba(21,33,74,.6);
+    border-radius: 20px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+  .hero {
+    width: 160px; height: 160px;
+    border-radius: 16px;
+    background: var(--blue-deep);
+    display: grid; place-items: center;
+  }
+  .hero svg { width: 128px; height: 128px; }
+  .num { color: var(--green); font-size: 12px; font-weight: 700; letter-spacing: .12em; }
+  h2 { font-size: 20px; margin: 4px 0 6px; }
+  .desc { color: var(--subtle); font-size: 14px; line-height: 1.55; margin: 0 0 16px; }
+  .previews { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .header-preview {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 14px 8px 8px;
+    border-radius: 12px;
+    background: var(--blue);
+    border: 1px solid rgba(255,255,255,.06);
+  }
+  .header-preview svg { width: 40px; height: 40px; }
+  .wordmark { font-weight: 700; font-size: 14px; }
+  .fav { display: flex; align-items: end; gap: 8px; }
+  .fav svg { display: block; }
+  .tag {
+    display: inline-block;
+    font-size: 11px; font-weight: 600;
+    color: var(--blue);
+    background: var(--green);
+    border-radius: 999px;
+    padding: 2px 8px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  @media (max-width: 560px) {
+    .card { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="r-body" fill-rule="evenodd" d="M18 49V15h13c10.5 0 17 4.5 17 11 0 6.2-6.2 10.8-16.5 11.2L45.5 49h-8.3L26.2 37.4V49Zm8.8-28.8h4.4c5.4 0 8.6 2.4 8.6 5.8s-3.2 5.8-8.6 5.8h-4.4Z" />
+    <path id="r-leg" d="M33.5 36.2 45.5 49h-8.3L26.2 37.4l7.3-1.2Z" />
+    <g id="r">
+      <use href="#r-body" fill="#e8edf5" />
+      <use href="#r-leg" fill="#39ff88" />
+    </g>
+    <use id="r-big" href="#r" transform="translate(33 32) scale(1.08) translate(-33 -32)" />
+
+    <mask id="m1" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff" />
+      <path d="M0 35.5 64 27v3.2L0 38.7Z" fill="#000" />
+    </mask>
+    <mask id="m2" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff" />
+      <path d="M0 34.3 64 25.8v5.6L0 39.9Z" fill="#000" />
+    </mask>
+    <mask id="m3" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff" />
+      <rect y="30.4" width="64" height="3.2" fill="#000" />
+    </mask>
+    <mask id="m4" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff" />
+      <path d="M0 31.8 64 23.3v2L0 33.8Z" fill="#000" />
+      <path d="M0 38.2 64 29.7v2L0 40.2Z" fill="#000" />
+    </mask>
+    <mask id="m5" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff" />
+      <path d="M0 13 64 47.5v3.2L0 16.2Z" fill="#000" />
+    </mask>
+    <mask id="m7" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff" />
+      <path d="M0 34.6H31.4V28.6H64V31.8H34.6V37.8H0Z" fill="#000" />
+    </mask>
+    <mask id="m8" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff" />
+      <rect y="23.2" width="64" height="1.6" fill="#000" />
+      <rect y="30.2" width="64" height="1.6" fill="#000" />
+      <rect y="37.2" width="64" height="1.6" fill="#000" />
+    </mask>
+    <mask id="m9" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff" />
+      <path d="M0 38.6Q32 22.6 64 33.4V36.6Q32 25.8 0 41.8Z" fill="#000" />
+    </mask>
+    <mask id="m10" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff" />
+      <rect x="26.2" y="12" width="2.6" height="7.5" fill="#000" />
+      <rect x="26.2" y="29.5" width="2.6" height="8.5" fill="#000" />
+    </mask>
+
+    <clipPath id="c6-top" clipPathUnits="userSpaceOnUse">
+      <path d="M0 0H64V27.4L0 35.9Z" />
+    </clipPath>
+    <clipPath id="c6-bottom" clipPathUnits="userSpaceOnUse">
+      <path d="M0 37.5 64 29V64H0Z" />
+    </clipPath>
+
+    <symbol id="logo-1" viewBox="0 0 64 64"><g mask="url(#m1)"><use href="#r-big" /></g></symbol>
+    <symbol id="logo-2" viewBox="0 0 64 64"><g mask="url(#m2)"><use href="#r-big" /></g></symbol>
+    <symbol id="logo-3" viewBox="0 0 64 64"><g mask="url(#m3)"><use href="#r-big" /></g></symbol>
+    <symbol id="logo-4" viewBox="0 0 64 64"><g mask="url(#m4)"><use href="#r-big" /></g></symbol>
+    <symbol id="logo-5" viewBox="0 0 64 64"><g mask="url(#m5)"><use href="#r-big" /></g></symbol>
+    <symbol id="logo-6" viewBox="0 0 64 64">
+      <g clip-path="url(#c6-bottom)"><use href="#r-big" transform="translate(-1.2 0)" /></g>
+      <g clip-path="url(#c6-top)"><use href="#r-big" transform="translate(2.2 0)" /></g>
+    </symbol>
+    <symbol id="logo-7" viewBox="0 0 64 64"><g mask="url(#m7)"><use href="#r-big" /></g></symbol>
+    <symbol id="logo-8" viewBox="0 0 64 64"><g mask="url(#m8)"><use href="#r-big" /></g></symbol>
+    <symbol id="logo-9" viewBox="0 0 64 64"><g mask="url(#m9)"><use href="#r-big" /></g></symbol>
+    <symbol id="logo-10" viewBox="0 0 64 64"><g mask="url(#m10)"><use href="#r-big" /></g></symbol>
+  </defs>
+</svg>
+
+<main>
+  <span class="eyebrow">Identidade · stencil</span>
+  <h1>Logo “R” — 10 variações stencil</h1>
+  <p class="intro">
+    Todas partem da opção que você escolheu: o mesmo R com a perna em AI Green,
+    atravessado por um corte. Muda só o corte — espessura, ângulo, quantidade e forma.
+    Cada card mostra a marca em destaque, no header (40px) e como favicon (32px e 16px).
+  </p>
+
+  <div class="grid" id="grid"></div>
+</main>
+
+<script>
+  const OPTIONS = [
+    { name: "Corte diagonal", tag: "escolhida", desc: "A referência: um corte fino subindo para a direita, separando o bojo da perna." },
+    { name: "Corte largo", desc: "O mesmo ângulo com uma fenda mais aberta. Fica mais evidente no favicon e em tamanhos pequenos." },
+    { name: "Corte reto", desc: "Uma fenda horizontal, na altura do meio da letra. Mais sóbrio e geométrico." },
+    { name: "Corte duplo", desc: "Duas fendas finas paralelas, como peça usinada ou faixa de velocidade." },
+    { name: "Corte na direção da perna", desc: "A fenda desce para a direita, no mesmo sentido da perna verde — dá movimento para frente." },
+    { name: "Fatia deslocada", desc: "A parte de cima desliza para a direita sobre o corte, como uma peça encaixando. Mais dinâmico." },
+    { name: "Corte em degrau", desc: "A fenda dá um degrau no meio, como uma trilha de circuito ou um encaixe de engenharia." },
+    { name: "Três cortes", desc: "Três linhas finas horizontais, como uma leitura de scanner passando pela letra." },
+    { name: "Corte em arco", desc: "A fenda curva suavemente, menos rígida que o corte reto e com sensação de fluxo." },
+    { name: "Stencil clássico", desc: "Pequenas pontes separam a haste do bojo, como as letras de molde pintadas em caixas e máquinas." },
+  ];
+
+  const use = (id, size) =>
+    `<svg viewBox="0 0 64 64" width="${size}" height="${size}"><use href="#logo-${id}"/></svg>`;
+
+  const favicon = (id, size) =>
+    `<svg viewBox="0 0 64 64" width="${size}" height="${size}">
+       <rect width="64" height="64" rx="14" fill="#0b132b"/>
+       <g transform="translate(32 32) scale(.86) translate(-32 -32)"><use href="#logo-${id}"/></g>
+     </svg>`;
+
+  document.getElementById("grid").innerHTML = OPTIONS.map((o, i) => {
+    const id = i + 1;
+    return `
+      <article class="card">
+        <div class="hero">${use(id, 128)}</div>
+        <div>
+          <span class="num">OPÇÃO ${String(id).padStart(2, "0")}</span>
+          <h2>${o.name}${o.tag ? `<span class="tag">${o.tag}</span>` : ""}</h2>
+          <p class="desc">${o.desc}</p>
+          <div class="previews">
+            <div class="header-preview">${use(id, 40)}<span class="wordmark">Rafael Coelho</span></div>
+            <div class="fav">${favicon(id, 32)}${favicon(id, 16)}</div>
+          </div>
+        </div>
+      </article>`;
+  }).join("");
+</script>
+</body>
+</html>
