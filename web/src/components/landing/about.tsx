@@ -26,12 +26,27 @@ function Portrait({ alt, className = "" }: { alt: string; className?: string }) 
   );
 }
 
+function YearsBadge({ className = "" }: { className?: string }) {
+  return (
+    <div
+      className={`glass rounded-xl px-3 py-2 sm:rounded-2xl sm:px-4 sm:py-3 ${className}`}
+    >
+      <p className="font-display text-lg font-bold text-ai-green sm:text-2xl">
+        5+ anos
+      </p>
+      <p className="text-[10px] text-subtle sm:text-xs">
+        em plataformas de missão crítica
+      </p>
+    </div>
+  );
+}
+
 export function About() {
   return (
     <Section id="sobre">
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-        <div className="relative mx-auto w-full max-w-md px-6 pt-16 pb-6">
-          <div className="relative aspect-square w-full">
+        <div className="relative mx-auto w-full max-w-md px-6 pt-12 pb-6 sm:pt-16">
+          <div className="relative mx-auto aspect-square w-full max-w-[260px] sm:max-w-none">
             <div
               aria-hidden
               className="absolute -inset-4 rounded-full border border-white/8"
@@ -42,16 +57,7 @@ export function About() {
             {/* Same image over the circle, cut at the shoulders, so the head breaks out of the top edge. */}
             <Portrait alt="" className="[clip-path:inset(0_0_50%_0)]" />
 
-            <div className="glass absolute top-[66%] -right-6 rounded-2xl px-4 py-3 sm:-right-16">
-              <p className="font-display text-2xl font-bold text-ai-green">
-                5+ anos
-              </p>
-              <p className="text-xs text-subtle">em plataformas de missão crítica</p>
-            </div>
-            <div className="glass absolute bottom-[6%] -left-4 flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium text-foreground sm:-left-8">
-              <span aria-hidden className="size-2 rounded-full bg-ai-green" />
-              Energia · Educação · Fintech
-            </div>
+            <YearsBadge className="absolute bottom-[2%] -left-8 sm:bottom-[6%] sm:-left-8" />
           </div>
         </div>
 
