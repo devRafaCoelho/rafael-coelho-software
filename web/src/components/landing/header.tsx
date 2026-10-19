@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import { Mark } from "@/components/landing/mark";
 
 const LINKS = [
@@ -13,23 +14,37 @@ const LINKS = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-foreground/8 bg-background/95 backdrop-blur-md">
-      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="/" className="flex items-center gap-3">
-          <Mark className="size-10 shrink-0 text-graphite" />
-          <span className="font-display hidden text-sm font-bold sm:block">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
+        scrolled || open
+          ? "border-white/8 bg-prompt-blue/90 shadow-lg backdrop-blur-md"
+          : "border-transparent bg-transparent"
+      }`}
+    >
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center gap-3">
+          <Mark className="size-10 shrink-0 text-prompt-blue-light" />
+          <span className="font-display hidden text-sm font-bold text-foreground sm:block">
             Rafael Coelho
           </span>
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-8 md:flex">
           {LINKS.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm text-foreground/55 transition-colors hover:text-foreground"
+                className="text-sm text-subtle transition-colors hover:text-foreground"
               >
                 {link.label}
               </a>
@@ -40,7 +55,7 @@ export function Header() {
         <div className="hidden md:block">
           <a
             href="#vamos-conversar"
-            className="glow-lime inline-flex items-center justify-center rounded-xl border border-lime/50 bg-lime px-4 py-2 text-xs font-semibold text-cta-foreground transition-colors hover:bg-lime/90"
+            className="glow-green inline-flex items-center justify-center rounded-xl border border-ai-green/50 bg-ai-green px-4 py-2 text-xs font-semibold text-prompt-blue transition-colors hover:bg-ai-green/90"
           >
             Agendar Diagnóstico
           </a>
@@ -70,16 +85,13 @@ export function Header() {
       </nav>
 
       {open ? (
-        <div
-          id="menu-mobile"
-          className="glass mx-4 rounded-2xl p-4 md:hidden"
-        >
+        <div id="menu-mobile" className="glass mx-4 mb-4 rounded-2xl p-4 md:hidden">
           <ul className="flex flex-col gap-3 text-sm font-medium">
             {LINKS.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="block py-1"
+                  className="block py-1 text-subtle transition-colors hover:text-foreground"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
@@ -89,7 +101,7 @@ export function Header() {
             <li>
               <a
                 href="#vamos-conversar"
-                className="glow-lime mt-1 inline-flex rounded-xl border border-lime/50 bg-lime px-4 py-2 text-xs font-semibold text-cta-foreground"
+                className="glow-green mt-1 inline-flex rounded-xl border border-ai-green/50 bg-ai-green px-4 py-2 text-xs font-semibold text-prompt-blue"
                 onClick={() => setOpen(false)}
               >
                 Agendar Diagnóstico

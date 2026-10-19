@@ -29,92 +29,65 @@ const STEPS = [
 
 export function Help() {
   return (
-    <Section id="como-ajudo" className="bg-muted-surface/70">
+    <Section id="como-ajudo">
       <SectionHeader
         eyebrow="Como posso ajudar"
         title="Do problema ao sistema no ar"
         description="Um processo claro, com entregas incrementais e foco em valor desde o primeiro passo."
       />
 
-      <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
-        {PAINS.map((pain, index) => (
-          <li
-            key={pain}
-            className={[
-              "glass flex items-start gap-3 rounded-xl p-4 lg:col-span-2",
-              index === 3 ? "lg:col-start-2" : "",
-            ]
-              .filter(Boolean)
-              .join(" ")}
-          >
+      <ul className="mb-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {PAINS.map((pain) => (
+          <li key={pain} className="glass flex items-start gap-3 rounded-xl p-4">
             <span
               aria-hidden
-              className="mt-1.5 size-2 shrink-0 rounded-full bg-lime"
+              className="mt-1 size-2 shrink-0 rounded-full bg-ai-green"
             />
-            <span className="text-sm leading-snug text-foreground/70">
-              {pain}
-            </span>
+            <p className="text-sm text-subtle">{pain}</p>
           </li>
         ))}
       </ul>
 
-      <ol className="relative mx-auto mt-16 max-w-4xl">
+      <div className="relative">
         <div
           aria-hidden
-          className="absolute top-3 bottom-3 left-[1.125rem] w-px bg-foreground/12 lg:left-1/2 lg:-translate-x-px"
+          className="absolute top-0 left-1/2 hidden h-full w-px -translate-x-px bg-ai-green/30 lg:block"
         />
-        {STEPS.map((step, index) => {
-          const left = index % 2 === 0;
-          const n = String(index + 1).padStart(2, "0");
-          return (
-            <li
-              key={step.title}
-              className="relative grid grid-cols-[2.25rem_1fr] gap-x-5 pb-12 last:pb-0 lg:grid-cols-2 lg:gap-x-0"
-            >
-              <div
-                aria-hidden
-                className="relative z-10 flex size-9 items-center justify-center rounded-full border-2 border-lime bg-background text-[11px] font-bold tracking-wide text-graphite lg:absolute lg:left-1/2 lg:-translate-x-1/2"
+        <ol className="flex flex-col gap-8 md:gap-12">
+          {STEPS.map((step, index) => {
+            const left = index % 2 === 0;
+            const n = String(index + 1).padStart(2, "0");
+            return (
+              <li
+                key={step.title}
+                className={`relative flex flex-col gap-4 md:flex-row md:items-center ${left ? "lg:flex-row" : "lg:flex-row-reverse"}`}
               >
-                {n}
-              </div>
-              <div
-                className={[
-                  "min-w-0 pt-1 lg:pt-0",
-                  left
-                    ? "lg:col-start-1 lg:row-start-1 lg:pr-14 lg:text-right"
-                    : "lg:col-start-2 lg:row-start-1 lg:pl-14",
-                ].join(" ")}
-              >
-                <div
-                  className={[
-                    "glass rounded-2xl p-6 transition-colors hover:border-lime/40",
-                    left ? "lg:ml-auto" : "",
-                  ]
-                    .filter(Boolean)
-                    .join(" ")}
-                >
-                  <span className="mb-2 inline-block text-xs font-bold text-[#5a9209] lg:hidden">
-                    {n}
-                  </span>
-                  <h3 className="font-display mb-2 text-xl font-semibold">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-foreground/65">
-                    {step.body}
-                  </p>
+                <div className="hidden lg:absolute lg:left-1/2 lg:z-10 lg:flex lg:-translate-x-1/2 lg:items-center lg:justify-center">
+                  <div className="flex size-10 items-center justify-center rounded-full bg-prompt-blue ring-2 ring-ai-green/50">
+                    <span className="text-xs font-bold text-ai-green">{n}</span>
+                  </div>
                 </div>
-              </div>
-              <div
-                aria-hidden
-                className={[
-                  "hidden lg:block",
-                  left ? "lg:col-start-2" : "lg:col-start-1 lg:row-start-1",
-                ].join(" ")}
-              />
-            </li>
-          );
-        })}
-      </ol>
+                <div
+                  className={`flex-1 ${left ? "lg:pr-16 lg:text-right" : "lg:pl-16"}`}
+                >
+                  <div className="glass rounded-2xl p-6 transition-colors hover:border-ai-green/30">
+                    <span className="mb-2 inline-block text-xs font-bold text-ai-green lg:hidden">
+                      {n}
+                    </span>
+                    <h3 className="font-display mb-2 text-xl font-semibold text-foreground">
+                      {step.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-subtle">
+                      {step.body}
+                    </p>
+                  </div>
+                </div>
+                <div aria-hidden className="hidden flex-1 lg:block" />
+              </li>
+            );
+          })}
+        </ol>
+      </div>
     </Section>
   );
 }

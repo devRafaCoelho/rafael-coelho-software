@@ -60,16 +60,16 @@ export function BudgetSelect({
             }
           }, 0);
         }}
-        className="flex h-11 w-full items-center justify-between rounded-xl border border-foreground/12 bg-background px-3 pr-5 text-left text-base outline-none transition-colors focus:border-graphite"
+        className="flex h-11 w-full items-center justify-between rounded-xl border border-white/10 bg-prompt-blue-light/60 px-3 pr-5 text-left text-base outline-none transition-colors focus:border-ai-green/60"
       >
-        <span className={value ? "text-foreground" : "text-foreground/45"}>
+        <span className={value ? "text-foreground" : "text-subtle/70"}>
           {value ?? "Selecione a faixa"}
         </span>
         <svg
           aria-hidden
           viewBox="0 0 20 20"
           fill="currentColor"
-          className={`size-4 shrink-0 text-foreground/55 transition-transform ${open ? "rotate-180" : ""}`}
+          className={`size-4 shrink-0 text-subtle transition-transform ${open ? "rotate-180" : ""}`}
         >
           <path
             fillRule="evenodd"
@@ -84,7 +84,7 @@ export function BudgetSelect({
           id={listId}
           role="listbox"
           aria-label="Faixa de orçamento"
-          className="absolute z-20 mt-2 w-full overflow-hidden rounded-2xl border border-foreground/10 bg-surface p-1.5 shadow-[0_16px_40px_rgba(35,38,47,0.14)]"
+          className="absolute z-20 mt-2 w-full overflow-hidden rounded-2xl border border-white/10 bg-prompt-blue-light p-1.5 shadow-lg"
         >
           {budgetBands.map((band) => {
             const selected = value === band;
@@ -95,8 +95,8 @@ export function BudgetSelect({
                   className={[
                     "flex w-full items-center rounded-xl px-3 py-2.5 text-left text-sm transition-colors",
                     selected
-                      ? "bg-lime/35 font-medium text-graphite"
-                      : "text-foreground/80 hover:bg-muted-surface",
+                      ? "bg-ai-green/15 font-medium text-ai-green"
+                      : "text-foreground/85 hover:bg-white/5",
                   ].join(" ")}
                   onClick={() => {
                     onChange(band);

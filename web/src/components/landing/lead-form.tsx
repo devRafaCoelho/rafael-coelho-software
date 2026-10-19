@@ -10,7 +10,7 @@ import { track } from "@/lib/analytics";
 import { formatWhatsapp, leadSchema, type Lead } from "@/lib/lead";
 
 const fieldClass =
-  "h-11 w-full rounded-xl border border-foreground/12 bg-background px-3 text-base outline-none transition-colors focus:border-graphite";
+  "h-11 w-full rounded-xl border border-white/10 bg-prompt-blue-light/60 px-3 text-base text-foreground outline-none transition-colors placeholder:text-subtle/70 focus:border-ai-green/60";
 
 export function LeadForm() {
   const {
@@ -89,7 +89,7 @@ export function LeadForm() {
       <label className="flex flex-col gap-1 text-sm sm:col-span-2">
         Mensagem
         <textarea
-          className="min-h-28 w-full rounded-xl border border-foreground/12 bg-background px-3 py-2 text-base outline-none transition-colors focus:border-graphite"
+          className="min-h-28 w-full rounded-xl border border-white/10 bg-prompt-blue-light/60 px-3 py-2 text-base text-foreground outline-none transition-colors focus:border-ai-green/60"
           {...register("message")}
         />
       </label>
@@ -125,11 +125,11 @@ export function LeadForm() {
               />
               <span
                 aria-hidden
-                className="pointer-events-none flex size-4 items-center justify-center rounded border border-foreground/25 bg-white peer-checked:border-lime peer-checked:bg-lime peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-lime"
+                className="pointer-events-none flex size-4 items-center justify-center rounded border border-white/25 bg-prompt-blue-light peer-checked:border-ai-green peer-checked:bg-ai-green peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-ai-green"
               >
                 <svg
                   viewBox="0 0 16 16"
-                  className={`size-3.5 text-graphite ${field.value ? "opacity-100" : "opacity-0"}`}
+                  className={`size-3.5 text-prompt-blue ${field.value ? "opacity-100" : "opacity-0"}`}
                   fill="currentColor"
                 >
                   <path d="M6.5 11.2 3.2 7.9l1.1-1.1 2.2 2.2 5-5.1 1.1 1.1z" />
@@ -142,7 +142,7 @@ export function LeadForm() {
       />
       <a
         href="/privacidade"
-        className="text-sm underline underline-offset-4 sm:col-span-2"
+        className="text-sm text-subtle underline underline-offset-4 transition-colors hover:text-foreground sm:col-span-2"
       >
         Política de privacidade
       </a>
@@ -152,7 +152,7 @@ export function LeadForm() {
       <Button
         type="submit"
         disabled={!consent}
-        className="h-12 w-fit bg-cta px-5 text-base text-cta-foreground hover:bg-cta/90 sm:col-span-2"
+        className="glow-green h-12 w-full border sm:w-fit border-ai-green/50 bg-ai-green px-6 text-sm font-semibold text-prompt-blue hover:bg-ai-green/90 sm:col-span-2"
       >
         Enviar
       </Button>

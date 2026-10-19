@@ -29,7 +29,7 @@ const ITEMS = [
 
 export function Differentials() {
   return (
-    <Section id="diferenciais" className="bg-muted-surface/70">
+    <Section id="diferenciais">
       <SectionHeader
         eyebrow="Diferenciais"
         title="Por que trabalhar comigo"
@@ -38,19 +38,19 @@ export function Differentials() {
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {ITEMS.map((item, index) => (
           <li key={item.title}>
-            <div className="glass group relative overflow-hidden rounded-2xl p-6 transition-colors hover:border-lime/40">
+            <div className="glass group relative h-full overflow-hidden rounded-2xl p-6 transition-colors hover:border-ai-green/30">
               <div
                 aria-hidden
-                className="absolute -top-4 -right-4 size-24 rounded-full bg-lime/15 transition-transform group-hover:scale-150"
+                className="absolute -top-4 -right-4 size-24 rounded-full bg-ai-green/5 transition-transform group-hover:scale-150"
               />
               <div className="relative">
-                <span className="font-display mb-3 inline-block text-2xl font-bold text-lime/70">
+                <span className="font-display mb-3 inline-block text-2xl font-bold text-ai-green/40">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3 className="font-display mb-2 text-lg font-semibold">
+                <h3 className="font-display mb-2 text-lg font-semibold text-foreground">
                   {item.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-foreground/65">
+                <p className="text-sm leading-relaxed text-subtle">
                   {item.body}
                 </p>
               </div>

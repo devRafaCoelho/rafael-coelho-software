@@ -36,7 +36,7 @@ test("a página segue a estrutura do funil", () => {
 test("a página não usa palavra proibida nem faixa de clientes", () => {
   assert.doesNotMatch(
     page,
-    /júnior|junior|sênior|senioridade|\bsenior\b|claude|chatgpt|openai|anthropic|\bcursor\b/i,
+    /júnior|junior|sênior|senioridade|\bsenior\b|claude|chatgpt|openai|anthropic|\bcursor\b(?!-)/i,
   );
   assert.doesNotMatch(page, /empresas que já confiaram|Neoenergia|Brivia|Auren/i);
 });

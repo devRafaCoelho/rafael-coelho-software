@@ -52,18 +52,18 @@ export function Services() {
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((service) => (
           <li key={service.title}>
-            <CardShell className="group flex h-full flex-col">
-              <a href="#vamos-conversar" className="block flex-1">
-                <span className="mb-4 inline-flex rounded-xl bg-lime/25 p-3 text-graphite transition-colors group-hover:bg-lime/40">
+            <CardShell className="h-full">
+              <a href="#vamos-conversar" className="block">
+                <span className="mb-4 inline-flex rounded-xl bg-ai-green/10 p-3 text-ai-green transition-colors group-hover:bg-ai-green/20">
                   <service.icon className="size-6" aria-hidden />
                 </span>
-                <h3 className="font-display mb-2 text-lg font-semibold">
+                <h3 className="font-display mb-2 text-lg font-semibold text-foreground">
                   {service.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-foreground/65">
+                <p className="text-sm leading-relaxed text-subtle">
                   {service.body}
                 </p>
-                <p className="mt-4 text-sm font-semibold text-[#5a9209] transition-colors group-hover:text-[#3f6b06]">
+                <p className="mt-4 text-sm font-semibold text-ai-green transition-colors group-hover:text-ai-green/80">
                   Saiba mais →
                 </p>
               </a>

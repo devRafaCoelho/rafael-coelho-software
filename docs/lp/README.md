@@ -2,7 +2,7 @@
 
 **Referência de estrutura:** [gersonbarbosa.com](https://gersonbarbosa.com/)  
 **Posicionamento:** arquitetura de software orientada a IA (sem citar fornecedor de modelo).  
-**Paleta:** Lime spark `#B6FF2E` · Graphite `#23262F`  
+**Paleta:** Prompt Blue `#0B132B` (fundo) · AI Green `#39FF88` (destaque) — tema escuro, sem gradiente de fundo  
 **Fonte:** `font-family: var(--font-space-grotesk), system-ui, sans-serif;`  
 **Ambiente:** `http://localhost:3000`
 

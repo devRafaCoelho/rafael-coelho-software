@@ -11,14 +11,16 @@ const LINKS = [
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-foreground/10 bg-background">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+    <footer className="relative border-t border-white/10 bg-prompt-blue">
+      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="flex items-center gap-3">
-            <Mark className="size-12 text-graphite" />
+            <Mark className="size-12 text-prompt-blue-light" />
             <div>
-              <p className="font-display font-bold">Rafael Coelho</p>
-              <p className="text-sm text-foreground/55">
+              <p className="font-display font-bold text-foreground">
+                Rafael Coelho
+              </p>
+              <p className="text-sm text-subtle">
                 Arquitetura de software orientada a IA
               </p>
             </div>
@@ -30,7 +32,7 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-foreground/55 transition-colors hover:text-foreground"
+                    className="text-sm text-subtle transition-colors hover:text-foreground"
                   >
                     {link.label}
                   </a>
@@ -44,26 +46,26 @@ export function Footer() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#5a9209] transition-colors hover:text-[#3f6b06]"
+              className="text-ai-green transition-colors hover:text-ai-green/80"
             >
               Falar no WhatsApp
             </a>
             <a
               href="https://www.linkedin.com/in/rafael-coelho-63b75010b/"
-              className="text-foreground/55 transition-colors hover:text-foreground"
+              className="text-subtle transition-colors hover:text-foreground"
             >
               LinkedIn
             </a>
             <a
               href="/privacidade"
-              className="text-foreground/55 transition-colors hover:text-foreground"
+              className="text-subtle transition-colors hover:text-foreground"
             >
               Política de privacidade
             </a>
           </div>
         </div>
 
-        <div className="mt-10 border-t border-foreground/10 pt-6 text-center text-xs text-foreground/45">
+        <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-subtle">
           © 2026 Rafael Coelho. Todos os direitos reservados.
         </div>
       </div>
