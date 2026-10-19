@@ -10,20 +10,48 @@ const SKILLS = [
   "Comunicação direta com quem decide",
 ];
 
+function Portrait({ alt, className = "" }: { alt: string; className?: string }) {
+  return (
+    <div
+      className={`absolute -top-[18%] -left-[9%] h-[118%] w-[118%] ${className}`}
+    >
+      <Image
+        src="/retrato.png"
+        alt={alt}
+        fill
+        sizes="(min-width: 1024px) 520px, 90vw"
+        className="object-contain"
+      />
+    </div>
+  );
+}
+
 export function About() {
   return (
     <Section id="sobre">
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-        <div className="relative flex justify-center">
-          <div className="glass relative rounded-3xl p-8">
-            <Image
-              src="/logo.png"
-              alt="Rafael Coelho"
-              width={1024}
-              height={1024}
-              className="mx-auto h-auto w-full max-w-sm rounded-2xl object-contain"
-              priority={false}
+        <div className="relative mx-auto w-full max-w-md px-6 pt-16 pb-6">
+          <div className="relative aspect-square w-full">
+            <div
+              aria-hidden
+              className="absolute -inset-4 rounded-full border border-white/8"
             />
+            <div className="absolute inset-0 overflow-hidden rounded-full border border-white/8 bg-prompt-blue-light">
+              <Portrait alt="Rafael Coelho" />
+            </div>
+            {/* Same image over the circle, cut at the shoulders, so the head breaks out of the top edge. */}
+            <Portrait alt="" className="[clip-path:inset(0_0_50%_0)]" />
+
+            <div className="glass absolute top-[66%] -right-6 rounded-2xl px-4 py-3 sm:-right-16">
+              <p className="font-display text-2xl font-bold text-ai-green">
+                5+ anos
+              </p>
+              <p className="text-xs text-subtle">em plataformas de missão crítica</p>
+            </div>
+            <div className="glass absolute bottom-[6%] -left-4 flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium text-foreground sm:-left-8">
+              <span aria-hidden className="size-2 rounded-full bg-ai-green" />
+              Energia · Educação · Fintech
+            </div>
           </div>
         </div>
 
