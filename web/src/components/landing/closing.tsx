@@ -6,7 +6,7 @@ export function Closing() {
   return (
     <section id="vamos-conversar" className="relative">
       <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
-        <div className="glass glow-green relative overflow-hidden rounded-3xl px-6 py-12 sm:px-12 sm:py-16">
+        <div className="glass glow-green relative overflow-hidden rounded-3xl px-5 py-10 sm:px-12 sm:py-16">
           <div className="grid gap-12 lg:grid-cols-[1fr_1.05fr] lg:items-start">
             <div className="lg:sticky lg:top-24">
               <Eyebrow className="mb-4">Vamos conversar</Eyebrow>
@@ -24,7 +24,7 @@ export function Closing() {
                 className="w-full sm:w-fit"
               />
             </div>
-            <div className="rounded-2xl border border-white/8 bg-prompt-blue p-6 md:p-8">
+            <div className="sm:rounded-2xl sm:border sm:border-white/8 sm:bg-prompt-blue sm:p-6 md:p-8">
               <LeadForm />
             </div>
           </div>

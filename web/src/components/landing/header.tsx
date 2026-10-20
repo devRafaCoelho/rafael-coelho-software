@@ -85,23 +85,26 @@ export function Header() {
       </nav>
 
       {open ? (
-        <div id="menu-mobile" className="glass mx-4 mb-4 rounded-2xl p-4 md:hidden">
-          <ul className="flex flex-col gap-3 text-sm font-medium">
+        <div
+          id="menu-mobile"
+          className="border-t border-white/8 px-4 pt-2 pb-6 sm:px-6 md:hidden"
+        >
+          <ul className="flex flex-col text-base font-medium">
             {LINKS.map((link) => (
-              <li key={link.href}>
+              <li key={link.href} className="border-b border-white/8">
                 <a
                   href={link.href}
-                  className="block py-1 text-subtle transition-colors hover:text-foreground"
+                  className="block py-4 text-subtle transition-colors hover:text-foreground"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
                 </a>
               </li>
             ))}
-            <li>
+            <li className="pt-6">
               <a
                 href="#vamos-conversar"
-                className="glow-green mt-1 inline-flex rounded-xl border border-ai-green/50 bg-ai-green px-4 py-2 text-xs font-semibold text-prompt-blue"
+                className="glow-green flex w-full items-center justify-center rounded-xl border border-ai-green/50 bg-ai-green px-6 py-3 text-sm font-semibold text-prompt-blue"
                 onClick={() => setOpen(false)}
               >
                 Agendar Diagnóstico
