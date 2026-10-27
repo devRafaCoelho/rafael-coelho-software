@@ -26,9 +26,24 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteName,
     description: siteDescription,
+    siteName: "Rafael Coelho",
     locale: "pt_BR",
     type: "website",
     url: siteUrl(),
+    images: [
+      {
+        url: "/og-image.png",
+        width: 600,
+        height: 600,
+        alt: siteName,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: siteName,
+    description: siteDescription,
+    images: ["/og-image.png"],
   },
 };
 
