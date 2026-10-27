@@ -73,6 +73,33 @@ test("entrega chama o Resend e o webhook quando configurados", async () => {
   assert.ok(calls.includes("https://hooks.example.com/lead"));
 });
 
+test("lead recusado pelo Resend responde erro em vez de sucesso", async () => {
+  const result = await receiveLead(valid, (lead) =>
+    deliverLead(
+      lead,
+      { RESEND_API_KEY: "re_test", LEAD_TO_EMAIL: "contato@example.com" },
+      async () =>
+        new Response('{"message":"Domain not verified"}', { status: 403 }),
+    ),
+  );
+  assert.equal(result.status, 502);
+  assert.equal(result.body.ok, false);
+});
+
+test("falha de rede na entrega responde erro", async () => {
+  const result = await receiveLead(valid, (lead) =>
+    deliverLead(
+      lead,
+      { RESEND_API_KEY: "re_test", LEAD_TO_EMAIL: "contato@example.com" },
+      async () => {
+        throw new TypeError("fetch failed");
+      },
+    ),
+  );
+  assert.equal(result.status, 502);
+  assert.equal(result.body.ok, false);
+});
+
 test("a url do whatsapp leva ao numero e a mensagem", () => {
   assert.match(whatsappUrl, /5571984570082/);
   assert.match(

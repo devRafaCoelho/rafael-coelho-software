@@ -45,8 +45,8 @@ export function LeadForm() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(values),
-        });
-        if (!response.ok) {
+        }).catch(() => null);
+        if (!response?.ok) {
           setSendError(
             "Não foi possível enviar. Tente de novo ou fale no WhatsApp.",
           );

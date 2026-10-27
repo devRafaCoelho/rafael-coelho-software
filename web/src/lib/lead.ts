@@ -51,7 +51,12 @@ export async function receiveLead(
 ): Promise<{ status: number; body: { ok: boolean } }> {
   const parsed = leadSchema.safeParse(input);
   if (!parsed.success) return { status: 400, body: { ok: false } };
-  await deliver(parsed.data);
+  try {
+    await deliver(parsed.data);
+  } catch (error) {
+    console.error("Falha ao entregar lead", error);
+    return { status: 502, body: { ok: false } };
+  }
   return { status: 200, body: { ok: true } };
 }
 
@@ -94,5 +99,15 @@ export async function deliverLead(
       }),
     );
   }
-  await Promise.all(jobs);
+  const responses = await Promise.all(jobs);
+  const failed = responses.filter((response) => !response.ok);
+  if (failed.length > 0) {
+    const details = await Promise.all(
+      failed.map(
+        async (response) =>
+          `${response.url || "provedor"} ${response.status}: ${await response.text()}`,
+      ),
+    );
+    throw new Error(`Entrega do lead recusada: ${details.join(" | ")}`);
+  }
 }
