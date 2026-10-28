@@ -101,7 +101,7 @@ test("falha de rede na entrega responde erro", async () => {
 });
 
 test("a url do whatsapp leva ao numero e a mensagem", () => {
-  assert.match(whatsappUrl, /5571984570082/);
+  assert.match(whatsappUrl, /5571996772118/);
   assert.match(
     decodeURIComponent(whatsappUrl),
     /Olá, Rafael\. Quero conversar sobre o que está travando na minha operação\./,

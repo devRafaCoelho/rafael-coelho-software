@@ -36,7 +36,7 @@ export function formatWhatsapp(value: string): string {
 const whatsappMessage =
   "Olá, Rafael. Quero conversar sobre o que está travando na minha operação.";
 
-export const whatsappUrl = `https://wa.me/5571984570082?text=${encodeURIComponent(whatsappMessage)}`;
+export const whatsappUrl = `https://wa.me/5571996772118?text=${encodeURIComponent(whatsappMessage)}`;
 
 export type LeadEnv = {
   RESEND_API_KEY?: string;
